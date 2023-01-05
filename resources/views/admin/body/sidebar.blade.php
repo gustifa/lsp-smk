@@ -6,7 +6,10 @@
 						<div class="menu-title">Dashboard</div>
 					</a>
 				</li>
-				<li>
+				
+
+				<li class="menu-label">Master Data</li>
+				<!-- <li>
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class='bx bx-building-house'></i>
 						</div>
@@ -16,36 +19,110 @@
 						<li> <a href="{{route('sekolah')}}"><i class="bx bx-right-arrow-alt"></i>Lihat Sekolah</a>
 						</li>
 					</ul>
-				</li>
-
-				<li class="menu-label">Pengaturan Awal</li>
+				</li> -->
 
 				<li>
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-cog"></i>
 						</div>
-						<div class="menu-title">Agama</div>
+						<div class="menu-title">Setting</div>
 					</a>
 					<ul>
+						<li> <a href="{{route('sekolah')}}"><i class="bx bx-right-arrow-alt"></i>Sekolah</a>
 						</li>
-						<li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Lihat</a>
+					</ul>
+					<ul>
+						</li>
+						<li> <a href="{{route('lihat.tahunajaran')}}"><i class="bx bx-right-arrow-alt"></i>Tahun Ajaran</a>
 						</li>
 						
 					</ul>
+					<ul>
+						</li>
+						<li> <a href="{{route('lihat.agama')}}"><i class="bx bx-right-arrow-alt"></i>Agama</a>
+						</li>
+						
+					</ul>
+
+					<ul>
+						<li> <a href="{{route('lihat.jurusan')}}"><i class="bx bx-right-arrow-alt"></i>Jurusan</a>
+						</li>
+						
+	
+					</ul>
+					<ul>
+						<li> <a href="{{route('lihat.kelas')}}"><i class="bx bx-right-arrow-alt"></i>Kelas</a>
+						</li>
+						
+	
+					</ul>
+
+					
+
+					<ul>
+						<li> <a href="{{route('lihat.mapel')}}"><i class="bx bx-right-arrow-alt"></i>Mata Pelajaran</a>
+						</li>
+						
+	
+					</ul>
+
+					<ul>
+						<li> <a href="{{route('lihat.user')}}"><i class="bx bx-right-arrow-alt"></i>Siswa</a>
+						</li>
+						
+	
+					</ul>
+
+					<ul>
+						<li> <a href="{{route('lihat.guru')}}"><i class="bx bx-right-arrow-alt"></i>Guru</a>
+						</li>
+						
+	
+					</ul>
+
+					
+
 				</li>
-				<li>
+
+								<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-cog"></i>
+						</div>
+						<div class="menu-title">Export</div>
+					</a>
+					<ul>
+						<li> <a href="{{route('export.user')}}"><i class="bx bx-right-arrow-alt"></i>Export User</a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- <li>
 					<a class="has-arrow" href="javascript:;">
 						<div class="parent-icon"><i class='bx bx-body'></i>
 						</div>
 						<div class="menu-title">Rombongan Belajar</div>
 					</a>
 					<ul>
-						<li> <a href="#"><i class="bx bx-right-arrow-alt"></i>Lihat Siswa</a>
+						<li> <a href="{{route('lihat.user')}}"><i class="bx bx-right-arrow-alt"></i>Lihat Siswa</a>
 						</li>
 						
 	
 					</ul>
-				</li>
+				</li> -->
+
+				<!-- <li>
+					<a class="has-arrow" href="javascript:;">
+						<div class="parent-icon"><i class='bx bx-body'></i>
+						</div>
+						<div class="menu-title">Data Guru</div>
+					</a>
+					<ul>
+						<li> <a href="{{route('lihat.user')}}"><i class="bx bx-right-arrow-alt"></i>Lihat Guru</a>
+						</li>
+						
+	
+					</ul>
+				</li> -->
 				
 				<li class="menu-label">Presensi Sholat</li>
 				<li>

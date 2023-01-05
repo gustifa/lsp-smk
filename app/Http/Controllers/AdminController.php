@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\UserRfid;
 use App\Models\Presensi;
 use App\Models\tblsholat;
 use Illuminate\Support\Facades\Hash;
@@ -12,10 +13,13 @@ use Illuminate\Support\Facades\Hash;
 class AdminController extends Controller
 {
     public function AdminDashboard(){
-         $adminData = User::find(1);
+         $adminData = User::all();
+         $dataPresensi = Presensi::all();
+         $userRfid = UserRfid::find(1);
          $presensiData = Presensi::find(1);
          $tabelsholat = tblsholat::all();
-        return view('admin.index',compact('adminData', 'presensiData','tabelsholat'));
+
+        return view('admin.index',compact('adminData', 'presensiData','tabelsholat','userRfid','dataPresensi'));
     }
 
     public function AdminDestroy(Request $request)

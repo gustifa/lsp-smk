@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('userrfids', function (Blueprint $table) {
-            $table->id();
-            $table->string('Nis');
-            $table->string('Kelas');
-            $table->string('RFID_ID');
+        Schema::create('agama', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nama');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('userrfids');
+        Schema::dropIfExists('agama');
     }
 };

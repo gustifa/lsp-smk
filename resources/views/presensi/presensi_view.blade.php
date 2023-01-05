@@ -28,26 +28,29 @@
 									<tr>
 										<th style="width: 8px;">No</th>
 										<th>Name</th>
+										<th>RFID_ID</th>
 										<th>Kelas</th>
-										<th>Sholat</th>
+										<th>Jurusan</th>
 										<th>Status</th>
 										<th>Ket</th>
-										<th>Aksi</th>
+										
 									</tr>
 								</thead>
 								<tbody>
 									@foreach($dataPresensi as $key => $item)
 									<tr>
 										<td>{{$key+1}}</td>
-										<td>{{$item->nama}}</td>
-										<td>{{$item->kelas}}</td>
-										<td>{{$item->sholat}}</td>
+										<td>{{$item['presensi']['Nama']}}</td>
+										<td>{{$item['presensi']['RFID_ID']}}</td>
+										<td>{{$item['presensi']['Kelas']}}</td>
+										<td>{{$item['presensi']['Jurusan']}}</td>
 										<td>{{$item->id_peserta_didik}}</td>
-										<td>{{$item->id_peserta_didik}}</td>
-										<td style="width: 20px;">
-											<a class="btn btn-info" href="">Edit</a>
-											<a class="btn btn-danger" href="" id="delete">Hapus</a>
-										</td>
+										@if ($item->Zuhur === $item->Zuhur )
+										<td>{{$item->Zuhur}}</td>
+										@else
+										<td>{{$item->Ashar}}</td>
+										@endif
+										
 									</tr>
 									@endforeach
 								</tbody>

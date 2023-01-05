@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('presensis', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->string('kelas');
-            $table->string('sholat');
+        Schema::create('tahun_ajaran', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nama',10);
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('presensis');
+        Schema::dropIfExists('tahun_ajaran');
     }
 };

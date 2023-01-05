@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use DB;
+use Carbon\Carbon;
 
 class UsersTableSeeder extends Seeder
 {
@@ -25,6 +26,7 @@ class UsersTableSeeder extends Seeder
                 'password' => Hash::make('111'),
                 'role' => 'admin',
                 'status' => 'active',
+                'created_at' => Carbon::now(),
             ],
             //guru
             [
@@ -34,6 +36,7 @@ class UsersTableSeeder extends Seeder
                 'password' => Hash::make('111'),
                 'role' => 'guru',
                 'status' => 'active',
+                'created_at' => Carbon::now(),
             ],
             //user
             [
@@ -43,6 +46,7 @@ class UsersTableSeeder extends Seeder
                 'password' => Hash::make('111'),
                 'role' => 'user',
                 'status' => 'active',
+                'created_at' => Carbon::now(),
             ],
             //siswa
             [
@@ -52,6 +56,7 @@ class UsersTableSeeder extends Seeder
                 'password' => Hash::make('111'),
                 'role' => 'siswa',
                 'status' => 'active',
+                'created_at' => Carbon::now(),
             ],
 
         ]);
