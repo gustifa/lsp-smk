@@ -11,4 +11,8 @@ class Jurusan extends Model
     protected $table = 'jurusan';
 	protected $primaryKey = 'id';
     protected $guarded = [];
+
+    	public function jurusan(){
+		return $this->belongsTo(Jurusan::class, 'Jurusan', 'id');
+	}
 }

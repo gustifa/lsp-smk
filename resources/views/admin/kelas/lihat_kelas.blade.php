@@ -28,6 +28,7 @@
 									<tr>
 										<th style="width: 8px;">No</th>
 										<th>Name</th>
+										<th>Id</th>
 										<th>Aksi</th>
 									</tr>
 								</thead>
@@ -36,6 +37,7 @@
 									<tr>
 										<td>{{$key+1}}</td>
 										<td>{{$item->nama}}</td>
+										<td>{{$item->id}}</td>
 										<td style="width: 20px;">
 											<a class="btn btn-info" href="">Edit</a>
 											<a class="btn btn-danger" href="" id="delete">Hapus</a>

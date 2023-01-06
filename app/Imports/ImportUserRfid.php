@@ -17,9 +17,10 @@ class ImportUserRfid implements ToModel
         return new UserRfid([
             'Nis' => $row[0],
             'Nama' => $row[1],
-            'Jurusan' => $row[2],
-            'Kelas' => $row[3],
-            'RFID_ID' => $row[4],
+            'Kelas' => $row[2],
+            'Jurusan' => $row[3],
+            'Group' => $row[4],
+            // 'RFID_ID' => $row[4],
         ]);
     }
 }

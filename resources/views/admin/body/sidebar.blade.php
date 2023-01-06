@@ -20,12 +20,12 @@
 						</li>
 					</ul>
 				</li> -->
-
+				<!-- Settingan Umum -->
 				<li>
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-cog"></i>
 						</div>
-						<div class="menu-title">Setting</div>
+						<div class="menu-title">Setting Umum</div>
 					</a>
 					<ul>
 						<li> <a href="{{route('sekolah')}}"><i class="bx bx-right-arrow-alt"></i>Sekolah</a>
@@ -37,6 +37,17 @@
 						</li>
 						
 					</ul>
+					
+				</li>
+
+				<!-- Settingan Data -->
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-cog"></i>
+						</div>
+						<div class="menu-title">Setting Data</div>
+					</a>
+					
 					<ul>
 						</li>
 						<li> <a href="{{route('lihat.agama')}}"><i class="bx bx-right-arrow-alt"></i>Agama</a>
@@ -93,9 +104,6 @@
 						
 	
 					</ul>
-
-					
-
 				</li>
 
 				<li>

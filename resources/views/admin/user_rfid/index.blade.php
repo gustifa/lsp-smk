@@ -29,6 +29,7 @@
 										<th>Name</th>
 										<th>Kelas</th>
 										<th>Jurusan</th>
+										<th>Group</th>
 										<th>RFID_ID</th>
 										<!-- <th>Aksi</th> -->
 								</thead>
@@ -37,8 +38,9 @@
 									<tr>
 										<td>{{$key+1}}</td>
 										<td>{{$item->Nama}}</td>
-										<td>{{$item->Kelas}}</td>
-										<td>{{$item->Jurusan}}</td>
+										<td>{{$item['kelas']['nama']}}</td>
+										<td>{{$item['jurusan']['nama']}}</td>
+										<td>{{$item['group']['nama']}}</td>
 										<td>{{$item->RFID_ID}}</td>
 										<!-- <td style="width: 20px;">
 											<a class="btn btn-info" href="">Edit</a>

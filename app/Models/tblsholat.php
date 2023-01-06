@@ -13,4 +13,10 @@ class tblsholat extends Model
     public function presensi(){
 		return $this->belongsTo(UserRfid::class, 'siswa_id', 'Nis');
 	}
+
+	// public function jurusan(){
+	// 	return $this->belongsTo(Jurusan::class, 'id', 'id');
+	// }
+
+
 }

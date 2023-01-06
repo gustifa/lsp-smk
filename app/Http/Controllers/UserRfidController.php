@@ -9,6 +9,7 @@ class UserRfidController extends Controller
 {
     public function Index(){
         $dataRfid = UserRfid::latest()->get();
+        //$dataRfid = UserRfid::all();
         return view('admin.user_rfid.index', compact('dataRfid'));
     }
 }
