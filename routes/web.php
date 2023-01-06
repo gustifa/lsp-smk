@@ -17,6 +17,7 @@ use App\Http\Controllers\Kelas\KelasController;
 use App\Http\Controllers\TahunAjaran\TahunAjaranController;
 use App\Http\Controllers\Rombel\RombelController;
 use App\Http\Controllers\Group\GroupController;
+use App\Http\Controllers\Import\ImportController;
 
 
 /*
@@ -63,6 +64,12 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
         //Route ExportUser
         Route::get('/user/export',[UserController::class,'ExportUser'])->name('export.user');
+        Route::get('/userrfid/export',[UserController::class,'ExportUserRfid'])->name('export.userrfid');
+
+        //Route Import
+        Route::get('/userrfid/lihat',[ImportController::class,'LihatImportUserRfid'])->name('lihat.import.userrfid');
+        Route::get('/guru/lihat',[ImportController::class,'LihatImportGuru'])->name('lihat.import.guru');
+        Route::post('/userrfid/import',[ImportController::class,'ImportUserRfid'])->name('import.userrfid');
     }); //End Group
 
     Route::prefix('setup')->group(function(){

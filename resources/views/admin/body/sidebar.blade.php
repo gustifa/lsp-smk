@@ -98,7 +98,7 @@
 
 				</li>
 
-								<li>
+				<li>
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-cog"></i>
 						</div>
@@ -106,6 +106,33 @@
 					</a>
 					<ul>
 						<li> <a href="{{route('export.user')}}"><i class="bx bx-right-arrow-alt"></i>Export User</a>
+						</li>
+					</ul>
+					<ul>
+						<li> <a href="{{route('export.userrfid')}}"><i class="bx bx-right-arrow-alt"></i>Export UserRFID</a>
+						
+					</ul>
+
+					<!-- <ul>
+						<li> <a href=""><i class="bx bx-right-arrow-alt"></i>Export Guru</a>
+						
+					</ul> -->
+				</li>
+
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-cog"></i>
+						</div>
+						<div class="menu-title">Import</div>
+					</a>
+					
+					<ul>
+						<li> <a href="{{route('lihat.import.userrfid')}}"><i class="bx bx-right-arrow-alt"></i>Import UserRFID</a>
+						</li>
+					</ul>
+
+					<ul>
+						<li> <a href="{{route('lihat.import.guru')}}"><i class="bx bx-right-arrow-alt"></i>Import Guru</a>
 						</li>
 					</ul>
 				</li>
