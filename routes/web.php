@@ -15,6 +15,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Jurusan\JurusanController;
 use App\Http\Controllers\Kelas\KelasController;
 use App\Http\Controllers\TahunAjaran\TahunAjaranController;
+use App\Http\Controllers\Rombel\RombelController;
+use App\Http\Controllers\Group\GroupController;
 
 
 /*
@@ -73,7 +75,7 @@ Route::middleware(['auth','role:admin'])->group(function(){
         Route::get('/agama/lihat',[AgamaController::class,'Agama'])->name('lihat.agama');
         Route::get('/agama/tambah',[AgamaController::class,'TambahAgama'])->name('tambah.agama');
         Route::get('/agama/edit/{id}',[AgamaController::class,'EditAgama'])->name('edit.agama');
-         Route::post('/agama/update/{id}',[AgamaController::class,'UpdateAgama'])->name('update.agama');
+        Route::post('/agama/update/{id}',[AgamaController::class,'UpdateAgama'])->name('update.agama');
         Route::post('/agama/simpan',[AgamaController::class,'SimpanAgama'])->name('simpan.agama');
         Route::get('/agama/hapus/{id}',[AgamaController::class,'HapusAgama'])->name('hapus.agama');
 
@@ -93,6 +95,22 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
         //Route Tahun Ajaran
         Route::get('/kelas/pembelajaran',[TahunAjaranController::class,'LihatTahunAjaran'])->name('lihat.tahunajaran');
+
+        //Route Rombongan Belajar
+        Route::get('/rombel/lihat',[RombelController::class,'LihatRombel'])->name('lihat.rombel');
+        Route::get('/rombel/tambah',[RombelController::class,'TambahRombel'])->name('tambah.rombel');
+        Route::post('/rombel/edit/{id}',[RombelController::class,'EditRombel'])->name('edit.rombel');
+        Route::post('/rombel/simpan',[RombelController::class,'SimpanRombel'])->name('simpan.rombel');
+        Route::get('/rombel/update/{id}',[RombelController::class,'UpdateRombel'])->name('update.rombel');
+        Route::post('/rombel/hapus/{id}',[RombelController::class,'HapusRombel'])->name('hapus.rombel');
+
+        //Route Group
+        Route::get('/group/lihat',[GroupController::class,'LihatGroup'])->name('lihat.group');
+        Route::get('/group/tambah',[GroupController::class,'TambahGroup'])->name('tambah.group');
+        Route::post('/group/edit/{id}',[GroupController::class,'EditGroup'])->name('edit.group');
+        Route::post('/group/simpan',[GroupController::class,'SimpanGroup'])->name('simpan.group');
+        Route::get('/group/update/{id}',[GroupController::class,'UpdateGroup'])->name('update.group');
+        Route::post('/group/hapus/{id}',[GroupController::class,'HapusGroup'])->name('hapus.group');
 
 
         

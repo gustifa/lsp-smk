@@ -57,6 +57,20 @@
 	
 					</ul>
 
+					<ul>
+						<li> <a href="{{route('lihat.group')}}"><i class="bx bx-right-arrow-alt"></i>Group</a>
+						</li>
+						
+	
+					</ul>
+
+					<ul>
+						<li> <a href="{{route('lihat.rombel')}}"><i class="bx bx-right-arrow-alt"></i>Rombongan Belajar</a>
+						</li>
+						
+	
+					</ul>
+
 					
 
 					<ul>

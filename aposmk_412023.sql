@@ -1,10 +1,10 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : mysql-36.93.153.191
+ Source Server         : 
  Source Server Type    : MySQL
  Source Server Version : 80030 (8.0.30)
- Source Host           : 36.93.153.191:3306
+ Source Host           : 
  Source Schema         : aposmk
 
  Target Server Type    : MySQL
