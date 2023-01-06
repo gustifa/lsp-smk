@@ -8,7 +8,8 @@ use App\Models\Agama;
 class AgamaController extends Controller
 {
     public function Agama(){
-        $dataAgama = Agama::latest()->get();
+        // $dataAgama = Agama::latest()->get();
+         $dataAgama = Agama::orderBy('id','asc')->get();
         return view('admin.agama.index', compact('dataAgama'));
     }
 
