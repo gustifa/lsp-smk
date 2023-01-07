@@ -37,8 +37,8 @@
 										<td>{{$key+1}}</td>
 										<td>{{$item->nama}}</td>
 										<td style="width: 20px;">
-											<a class="btn btn-info" href="">Edit</a>
-											<a class="btn btn-danger" href="" id="delete">Hapus</a>
+											<a class="btn btn-info" href=""><i class='bx bx-edit mr-1'></i></a>
+											<a class="btn btn-danger" href="" id="delete"><i class='bx bx-x-circle mr-1'></i></a>
 										</td>
 									</tr>
 									@endforeach

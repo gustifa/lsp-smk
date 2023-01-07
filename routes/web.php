@@ -96,9 +96,19 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
         //Route Jurusan
         Route::get('/jurusan/lihat',[JurusanController::class,'LihatJurusan'])->name('lihat.jurusan');
+        Route::get('/jurusan/tambah',[JurusanController::class,'TambahJurusan'])->name('tambah.jurusan');
+        Route::get('/jurusan/edit/{id}',[JurusanController::class,'EditJurusan'])->name('edit.jurusan');
+        Route::post('/jurusan/update/{id}',[JurusanController::class,'UpdateJurusan'])->name('update.jurusan');
+        Route::post('/jurusan/simpan',[JurusanController::class,'SimpanJurusan'])->name('simpan.jurusan');
+        Route::get('/jurusan/hapus/{id}',[JurusanController::class,'HapusJurusan'])->name('hapus.jurusan');
 
         //Route Kelas
         Route::get('/kelas/lihat',[KelasController::class,'LihatKelas'])->name('lihat.kelas');
+        Route::get('/kelas/tambah',[KelasController::class,'TambahKelas'])->name('tambah.kelas');
+        Route::get('/kelas/edit/{id}',[KelasController::class,'EditKelas'])->name('edit.kelas');
+        Route::post('/kelas/update/{id}',[KelasController::class,'UpdateKelas'])->name('update.kelas');
+        Route::post('/kelas/simpan',[KelasController::class,'SimpanKelas'])->name('simpan.kelas');
+        Route::get('/kelas/hapus/{id}',[KelasController::class,'HapusKelas'])->name('hapus.kelas');
 
         //Route Tahun Ajaran
         Route::get('/kelas/pembelajaran',[TahunAjaranController::class,'LihatTahunAjaran'])->name('lihat.tahunajaran');

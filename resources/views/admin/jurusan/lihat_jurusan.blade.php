@@ -19,7 +19,14 @@
 
 				</div>
 				<!--end breadcrumb-->
+				<div class="col-lg-3 col-xl-2">
+										<a href="{{route('tambah.jurusan')}}" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Jurusan</a>
+
+										
+				</div>
+
 				<hr/>
+
 				<div class="card">
 					<div class="card-body">
 						<div class="table-responsive">
@@ -41,8 +48,8 @@
 										<td>{{$item->kode}}</td>
 										<td>{{$item->id}}</td>
 										<td style="width: 20px;">
-											<a class="btn btn-info" href="">Edit</a>
-											<a class="btn btn-danger" href="" id="delete">Hapus</a>
+											<a class="btn btn-info" href="{{ route('edit.jurusan',$item->id) }}"><i class='bx bx-edit mr-1'></i></a>
+											<a class="btn btn-danger" href="{{ route('hapus.jurusan',$item->id) }}" id="delete"><i class='bx bx-x-circle mr-1'></i></a>
 										</td>
 									</tr>
 									@endforeach

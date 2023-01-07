@@ -19,6 +19,20 @@
 
 				</div>
 				<!--end breadcrumb-->
+				<!--end breadcrumb-->
+				<div class="col-lg-3 col-xl-2">
+
+										@isset($dataKelas)
+<a href="{{route('tambah.kelas')}}" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Kelas</a>
+										@endisset
+										 
+										@empty($dataKelas)
+										    
+										@endempty
+										
+
+										
+				</div>
 				<hr/>
 				<div class="card">
 					<div class="card-body">
@@ -39,8 +53,8 @@
 										<td>{{$item->nama}}</td>
 										<td>{{$item->id}}</td>
 										<td style="width: 20px;">
-											<a class="btn btn-info" href="">Edit</a>
-											<a class="btn btn-danger" href="" id="delete">Hapus</a>
+											<a class="btn btn-info" href="{{route('edit.kelas',$item->id)}}"><i class='bx bx-edit mr-1'></i></a>
+											<a class="btn btn-danger" href="{{route('hapus.kelas', $item->id)}}" id="delete"><i class='bx bx-x-circle mr-1'></i></a>
 										</td>
 									</tr>
 									@endforeach

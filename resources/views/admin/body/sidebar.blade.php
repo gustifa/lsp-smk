@@ -43,7 +43,7 @@
 				<!-- Settingan Data -->
 				<li>
 					<a href="javascript:;" class="has-arrow">
-						<div class="parent-icon"><i class="bx bx-cog"></i>
+						<div class="parent-icon"><i class="bx bx-data"></i>
 						</div>
 						<div class="menu-title">Setting Data</div>
 					</a>
@@ -108,7 +108,7 @@
 
 				<li>
 					<a href="javascript:;" class="has-arrow">
-						<div class="parent-icon"><i class="bx bx-cog"></i>
+						<div class="parent-icon"><i class="bx bx-export"></i>
 						</div>
 						<div class="menu-title">Export</div>
 					</a>
@@ -129,7 +129,7 @@
 
 				<li>
 					<a href="javascript:;" class="has-arrow">
-						<div class="parent-icon"><i class="bx bx-cog"></i>
+						<div class="parent-icon"><i class="bx bx-import"></i>
 						</div>
 						<div class="menu-title">Import</div>
 					</a>
