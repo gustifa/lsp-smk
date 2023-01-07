@@ -19,9 +19,9 @@ class UserOtp extends Model
     
         try {
   
-            $account_sid = getenv("AC1d711b2b6e2fd42e5fd1184bafd3a2ad");
-            $auth_token = getenv("738aaca52e1171f08247c54dd90b5b02");
-            $twilio_number = getenv("+17207821180");
+            // $account_sid = getenv("AC1d711b2b6e2fd42e5fd1184bafd3a2ad");
+            // $auth_token = getenv("738aaca52e1171f08247c54dd90b5b02");
+            // $twilio_number = getenv("+17207821180");
   
             $client = new Client($account_sid, $auth_token);
             $client->messages->create($receiverNumber, [

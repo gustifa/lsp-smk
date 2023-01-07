@@ -35,6 +35,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::controller(App\Http\Controllers\Auth\AuthOtpController::class)->group(function(){
+    Route::get('otp/login', 'login')->name('otp.login');
+    Route::post('otp/generate', 'generate')->name('otp.generate');
+    Route::get('otp/verification/{user_id}', 'verification')->name('otp.verification');
+    Route::post('otp/login', 'loginWithOtp')->name('otp.getlogin');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
