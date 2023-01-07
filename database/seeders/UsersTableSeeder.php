@@ -23,6 +23,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'admin',
                 'username' => 'admin',
                 'email' => 'fauzangustifa@gmail.com',
+                // 'password' => rand(123456, 999999),
                 'password' => Hash::make('111'),
                 'role' => 'admin',
                 'status' => 'active',
