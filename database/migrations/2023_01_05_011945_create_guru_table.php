@@ -15,16 +15,16 @@ return new class extends Migration
     {
         Schema::create('guru', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama');
-            $table->string('nuptk');
+            $table->string('nama',80);
+            $table->string('nik', 16);
+            $table->string('nuptk',16)->nullable();
             $table->string('nip')->nullable();
-            $table->string('jenis_kelamin');
-            $table->string('tempat_lahir');
-            $table->date('tanggal_lahir');
-            $table->string('nik', 16)->nullable();
-            $table->integer('mapel_id');
-            $table->integer('agama_id');
-            $table->integer('jurusan_id');
+            $table->string('jenis_kelamin')->nullable();
+            $table->string('tempat_lahir',50)->nullable();
+            $table->date('tanggal_lahir')->nullable();
+            $table->integer('mapel_id')->nullable();
+            $table->integer('agama_id')->nullable();
+            $table->integer('jurusan_id')->nullable();
             $table->string('alamat')->nullable();
             $table->string('rt')->nullable();
             $table->string('rw')->nullable();

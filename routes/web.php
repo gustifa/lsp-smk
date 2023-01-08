@@ -76,9 +76,10 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
         //Route Import
         Route::get('/userrfid/lihat',[ImportController::class,'LihatImportUserRfid'])->name('lihat.import.userrfid');
+        Route::post('/userrfid/import',[ImportController::class,'ImportUserRfid'])->name('import.userrfid');
 
         Route::get('/guru/lihat',[ImportController::class,'LihatImportGuru'])->name('lihat.import.guru');
-        Route::post('/userrfid/import',[ImportController::class,'ImportUserRfid'])->name('import.userrfid');
+        
     }); //End Group
 
     Route::prefix('setup')->group(function(){
@@ -99,6 +100,11 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
         //Route Guru
         Route::get('/guru/lihat',[GuruController::class,'Index'])->name('lihat.guru');
+        Route::get('/guru/tambah',[GuruController::class,'TambahGuru'])->name('tambah.guru');
+        Route::get('/guru/edit/{id}',[GuruController::class,'EditGuru'])->name('edit.guru');
+        Route::post('/guru/update/{id}',[GuruController::class,'UpdateGuru'])->name('update.guru');
+        Route::post('/guru/simpan',[GuruController::class,'SimpanGuru'])->name('simpan.guru');
+        Route::get('/guru/hapus/{id}',[GuruController::class,'HapusGuru'])->name('hapus.guru');
 
         //Route Mapel
         Route::get('/mapel/lihat',[MapelController::class,'Index'])->name('lihat.mapel');

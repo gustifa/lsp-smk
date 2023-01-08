@@ -80,7 +80,7 @@
 				<hr/>
 
 
-				<div class="card">
+<!-- 				<div class="card">
 							<div class="card-body">
 								<table class="table table-bordered mb-0">
 									<thead>
@@ -105,11 +105,11 @@
 								</tbody>
 								</table>
 							</div>
-				</div>
+				</div> -->
 
 
 
-				<!-- <div class="card">
+				<div class="card">
 					<div class="card-body">
 						<div class="table-responsive">
 							<table id="example2" class="table table-striped table-bordered">
@@ -137,7 +137,7 @@
 							</table>
 						</div>
 					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 		<!--end page wrapper -->

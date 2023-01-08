@@ -7,6 +7,7 @@ use Maatwebsite\Excel\Concerns\ToModel;
 
 class ImportUserRfid implements ToModel
 {
+    use Importable, SkipsErrors,SkipsFailures;
     /**
     * @param array $row
     *
@@ -23,4 +24,15 @@ class ImportUserRfid implements ToModel
             // 'RFID_ID' => $row[4],
         ]);
     }
+
+        public function rules(): array
+    {
+        return [
+            // '*.nipd' => ['unique:siswa,nipd','unique:users.username'],
+            '*.Nis' => ['unique:UserRfid,Nis'],
+
+        ];
+    }
+
+
 }

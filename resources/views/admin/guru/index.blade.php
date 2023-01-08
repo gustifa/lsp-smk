@@ -19,44 +19,55 @@
 
 				</div>
 				<!--end breadcrumb-->
-				<div class="row row-cols-auto g-3">
-					<div class="col">
-						<!-- 			<a href="{{route('tambah.agama')}}" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Agama</a>						
-									</div><a href="{{route('tambah.agama')}}" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Agama</a>						
+
+				<!-- Awal Moodal -->
+				<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+											<div class="btn-group" role="group">
+												<button type="button" class="btn btn-primary mb-3 mb-lg-0" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bxs-plus-square'></i> Guru</button>
+												
+											</div>
+										</div>
+
+										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Upload Template User</h5>
+														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+													</div>
+													<div class="modal-body">
+				<form action="{{ route('simpan.guru') }}" method="POST">
+            @csrf
+
+									<div class="mb-3">
+										<label class="form-label">Guru:</label>
+										<input type="text" name="nama" class="form-control" placeholder="Inputkan Nama">
+										@error('nama')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
 									</div>
-									</div><a href="{{route('tambah.agama')}}" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Agama</a>						
-									</div> -->
 
-						<!-- <a href="{{route('tambah.agama')}}" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Agama</a> -->
-						<a href="{{route('tambah.agama')}}" class="btn btn-primary px-3"><i class="bx bxs-plus-square mr-1"></i>Guru</a>
-						<!-- <a class="btn btn-dark px-3"><i class="bx bx-cloud-upload mr-1"></i>Upload</a> -->
-						<!-- <a class="btn btn-dark px-5"><i class="bx bx-cloud-upload mr-1"></i>Upload</a> -->
+									<div class="mb-3">
+										<label class="form-label">NIK:</label>
+										<input type="text" name="nik" class="form-control" placeholder="Inputkan Nama">
+										@error('nik')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+									</div>
 
-										<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-											<div class="btn-group" role="group">
-												<button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Import</button>
-												<ul class="dropdown-menu" style="margin: 0px;">
-													<li><a class="dropdown-item" href="#">Download Template</a>
-													</li>
-													<li><a class="dropdown-item" href="#">Import Guru</a>
-													</li>
-												</ul>
+
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+														<button type="submit" class="btn btn-primary">Simpan</button>
+													</div>
+													</form>
+												</div>
 											</div>
-										</div>			<!-- End Button Dropdown -->
+										</div>	<!-- AKhir Moodal -->
 
-										<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-											<div class="btn-group" role="group">
-												<button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Download</button>
-												<ul class="dropdown-menu" style="margin: 0px;">
-													<li><a class="dropdown-item" href="#">Exel</a>
-													</li>
-													<li><a class="dropdown-item" href="#">PDF</a>
-													</li>
-												</ul>
-											</div>
-										</div>			<!-- End Button Dropdown -->			
-					</div>
-				</div>
+
+				
 				
 				<hr/>
 
@@ -82,8 +93,9 @@
 										<td>{{$item->kelas_id}}</td>
 										<td>{{$item->jurusan_id}}</td>
 										<td style="width: 20px;">
-											<a class="btn btn-info" href="">Edit</a>
-											<a class="btn btn-danger" href="" id="delete">Hapus</a>
+											<a class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" href=""><i class='bx bx-edit mr-1'></i></a>
+											<a class="btn btn-danger" href="{{ route('hapus.guru',$item->id) }}" id="delete"><i class='bx bx-x-circle mr-1'></i></a>
+
 										</td>
 									</tr>
 									@endforeach
