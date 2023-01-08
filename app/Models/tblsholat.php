@@ -18,5 +18,7 @@ class tblsholat extends Model
 	// 	return $this->belongsTo(Jurusan::class, 'id', 'id');
 	// }
 
-
+	// public function jurusan(){
+	// 	return $this->belongsTo(Jurusan::class, 'id', 'id');
+	// }
 }

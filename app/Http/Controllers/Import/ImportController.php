@@ -9,6 +9,9 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\ImportUserRfid;
 use App\Imports\ImportGuru;
 
+use App\Models\UserRfid;
+use App\Models\Guru;
+
 class ImportController extends Controller
 {
     public function LihatImportUserRfid(Request $request){
@@ -17,10 +20,10 @@ class ImportController extends Controller
 
     public function importUserRfid(Request $request){
 
-      //   $validatedData = $request->validate([
-	    	// 	'Nis' => 'required|unique:user,Nis',
+        $validatedData = $request->validate([
+	    		'Nis' => 'required|unique:user,Nis',
 	    		
-	    	// ]);
+	    	]);
     	$notification = array(
 	    		'message' => 'UserRfidBerhasil ditambahkan',
 	    		'alert-type' => 'success'
@@ -31,6 +34,44 @@ class ImportController extends Controller
 
 
     }
+
+    // public function importGuru(Request $request){
+
+    //   //   $validatedData = $request->validate([
+    //         //  'Nis' => 'required|unique:user,Nis',
+                
+    //         // ]);
+    //     $notification = array(
+    //             'message' => 'UserRfidBerhasil ditambahkan',
+    //             'alert-type' => 'success'
+    //         );
+
+    //     Excel::import(new Guru, $request->file('file')->store('files'));
+    //     return redirect()->route('lihat.guru')->with($notification);
+
+
+    // }
+
+    // public function importUserRfid(Request $request){
+
+    //     $file = $request->file('file'); 
+    //     $nama_file = time() . ' ' . $file->getClientOriginalName(); 
+    //     $file->move(public_path() . '/file/excel/import_file/', $nama_file); // masukin file 
+    //     $import = new UserRfid; 
+    //         try { 
+    //             $import->import(public_path('/file/excel/import_file/' . $nama_file)); 
+    //             return redirect()->route('lihat.user')->with('success', 'Data siswa berhasil di import'); 
+    //         } catch (\Throwable $th) { 
+    //             //dd($import->failures()); 
+    //             if ($import->failures()->isNotEmpty()) { 
+    //                 return redirect()->route('lihat.user')->with('erorr', $import->failures()); 
+    //             }else { 
+    //                 return redirect()->route('lihat.user')->with('fail', 'Excel Tidak sesuai dengan template'); 
+    //             } 
+ 
+    //         }
+
+    // }
 
     public function LihatImportGuru(Request $request){
         return view('admin.import.import_guru');

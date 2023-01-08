@@ -15,11 +15,11 @@ class AdminController extends Controller
     public function AdminDashboard(){
          $adminData = User::all();
          $dataPresensi = Presensi::all();
-         $userRfid = UserRfid::find(1);
-         $presensiData = Presensi::find(1);
+         $dataUserRfid = UserRfid::all();
+         $presensiData = Presensi::all();
          $tabelsholat = tblsholat::all();
 
-        return view('admin.index',compact('adminData', 'presensiData','tabelsholat','userRfid','dataPresensi'));
+        return view('admin.index',compact('adminData', 'presensiData','tabelsholat','dataUserRfid','dataPresensi'));
     }
 
     public function AdminDestroy(Request $request)

@@ -21,7 +21,7 @@
 				</div>
 				<!--end breadcrumb-->
 	
-						<div class="row">
+				<div class="row">
 					<div class="col-xl-12 mx-auto">
 						<div class="card">
 							<div class="card-body">

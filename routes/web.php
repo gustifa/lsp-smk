@@ -72,9 +72,11 @@ Route::middleware(['auth','role:admin'])->group(function(){
         //Route ExportUser
         Route::get('/user/export',[UserController::class,'ExportUser'])->name('export.user');
         Route::get('/userrfid/export',[UserController::class,'ExportUserRfid'])->name('export.userrfid');
+        Route::get('/template/userrfid/excel', [UserRfidController::class,'template_excel_userrfid'])->name('template.excel.user_rfid');
 
         //Route Import
         Route::get('/userrfid/lihat',[ImportController::class,'LihatImportUserRfid'])->name('lihat.import.userrfid');
+
         Route::get('/guru/lihat',[ImportController::class,'LihatImportGuru'])->name('lihat.import.guru');
         Route::post('/userrfid/import',[ImportController::class,'ImportUserRfid'])->name('import.userrfid');
     }); //End Group
