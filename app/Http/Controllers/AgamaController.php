@@ -20,10 +20,10 @@ class AgamaController extends Controller
 
     public function SimpanAgama(Request $request){
         
-      //   $validatedData = $request->validate([
-	    	// 	'nama' => 'required|unique:agama,nama',
+        $validatedData = $request->validate([
+	    		'nama' => 'required|unique:agama,nama',
 	    		
-	    	// ]);
+	    	]);
 
 	    	$data = new Agama();
 	    	$data->nama = $request->nama;

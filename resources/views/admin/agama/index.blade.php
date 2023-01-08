@@ -48,6 +48,9 @@
 									<div class="mb-3">
 										<label class="form-label">Agama:</label>
 										<input type="text" name="nama" class="form-control" placeholder="Inputkan Agama">
+										@error('nama')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
 									</div>
 									
 									<!-- <div class="mb-3">
