@@ -20,12 +20,17 @@ class ImportController extends Controller
 
     public function importUserRfid(Request $request){
 
-        $validatedData = $request->validate([
-	    		'Nis' => 'required|unique:user,Nis',
+      //   $validatedData = $request->validate([
+	    	// 	'Nis' => 'required|unique:user,Nis',
 	    		
-	    	]);
+	    	// ]);
+
+        // $validatedData = $request->validate([
+        //         'Nis' => 'required|unique:user,Nis',
+                
+        //     ]);
     	$notification = array(
-	    		'message' => 'UserRfidBerhasil ditambahkan',
+	    		'message' => 'UserRfid Berhasil ditambahkan',
 	    		'alert-type' => 'success'
 	    	);
 

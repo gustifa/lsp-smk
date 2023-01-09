@@ -20,19 +20,53 @@
 				</div>
 				<!--end breadcrumb-->
 				<!--end breadcrumb-->
-				<div class="col-lg-3 col-xl-2">
+				
+				<!-- Awal Moodal -->
+				<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+											<div class="btn-group" role="group">
+												<button type="button" class="btn btn-primary mb-3 mb-lg-0" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bxs-plus-square'></i> Kelas</button>
+												<!-- <ul class="dropdown-menu" style="margin: 0px;">
+													<li><a class="dropdown-item" href="{{route('template.excel.user_rfid')}}">Download Template</a>
+													</li>
+													<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="{{route('lihat.import.userrfid')}}">Import Siswa</a>
+													</li>
+												</ul> -->
+											</div>
+										</div>
 
-										@isset($dataKelas)
-<a href="{{route('tambah.kelas')}}" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Kelas</a>
-										@endisset
-										 
-										@empty($dataKelas)
-										    
-										@endempty
-										
+										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Tambah Kelas</h5>
+														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+													</div>
+													<div class="modal-body">
+				<form action="{{ route('simpan.kelas') }}" method="POST">
+            @csrf
 
-										
-				</div>
+									<div class="mb-3">
+										<label class="form-label">Kelas:</label>
+										<input type="text" name="nama" class="form-control" placeholder="Inputkan Nama Kelas">
+										@error('nama')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+									</div>
+									
+									<!-- <div class="mb-3">
+										<button type="submit" class="btn btn-primary px-5"><i class='bx bx-save mr-1'></i>Simpan</button>
+									</div> -->
+								
+
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+														<button type="submit" class="btn btn-primary">Simpan</button>
+													</div>
+													</form>
+												</div>
+											</div>
+										</div>	<!-- AKhir Moodal -->
 				<hr/>
 				<div class="card">
 					<div class="card-body">

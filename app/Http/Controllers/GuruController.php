@@ -69,4 +69,12 @@ class GuruController extends Controller
 	    	return redirect()->route('lihat.guru')->with($notification);
 
 	    }
+
+	    public function template_excel_guru()
+    {
+        $path = public_path('/file/excel/import/import_template/template_excel_guru.xlsx');
+        $name = basename($path);
+        $headers = ["Content-Type:   application/vnd.ms-excel; charset=utf-8"];
+        return response()->download($path, $name, $headers);
+    }
 }

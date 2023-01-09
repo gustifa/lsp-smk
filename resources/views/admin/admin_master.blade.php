@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="{{asset('adminbackend/assets/css/header-colors.css')}}" />
 		<link href="{{asset('adminbackend/assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
-	<title>Sistem Informasi Presensi Online - SMK Negeri 1 Kinali</title>
+	<title>Aplikasi Presensi Online - SMK Negeri 1 Kinali || @yield('title')</title>
 </head>
 
 <body>

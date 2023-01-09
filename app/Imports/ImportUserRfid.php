@@ -7,7 +7,7 @@ use Maatwebsite\Excel\Concerns\ToModel;
 
 class ImportUserRfid implements ToModel
 {
-    use Importable, SkipsErrors,SkipsFailures;
+    //use Importable, SkipsErrors,SkipsFailures;
     /**
     * @param array $row
     *
@@ -25,14 +25,14 @@ class ImportUserRfid implements ToModel
         ]);
     }
 
-        public function rules(): array
-    {
-        return [
-            // '*.nipd' => ['unique:siswa,nipd','unique:users.username'],
-            '*.Nis' => ['unique:UserRfid,Nis'],
+    //     public function rules(): array
+    // {
+    //     return [
+    //         // '*.nipd' => ['unique:siswa,nipd','unique:users.username'],
+    //         '*.Nis' => ['unique:user,Nis'],
 
-        ];
-    }
+    //     ];
+    // }
 
 
 }

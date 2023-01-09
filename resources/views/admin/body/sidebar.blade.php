@@ -21,24 +21,7 @@
 					</ul>
 				</li> -->
 				<!-- Settingan Umum -->
-				<li>
-					<a href="javascript:;" class="has-arrow">
-						<div class="parent-icon"><i class="bx bx-cog"></i>
-						</div>
-						<div class="menu-title">Setting Umum</div>
-					</a>
-					<ul>
-						<li> <a href="{{route('sekolah')}}"><i class="bx bx-right-arrow-alt"></i>Sekolah</a>
-						</li>
-					</ul>
-					<ul>
-						</li>
-						<li> <a href="{{route('lihat.tahunajaran')}}"><i class="bx bx-right-arrow-alt"></i>Tahun Ajaran</a>
-						</li>
-						
-					</ul>
-					
-				</li>
+				
 
 				<!-- Settingan Data -->
 				<li>
@@ -108,6 +91,38 @@
 
 				<li>
 					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-cog"></i>
+						</div>
+						<div class="menu-title">Setting Umum</div>
+					</a>
+					<ul>
+						<li> <a href="{{route('sekolah')}}"><i class="bx bx-right-arrow-alt"></i>Sekolah</a>
+						</li>
+					</ul>
+					<ul>
+						</li>
+						<li> <a href="{{route('lihat.tahunajaran')}}"><i class="bx bx-right-arrow-alt"></i>Tahun Ajaran</a>
+						</li>
+						
+					</ul>
+					<ul>
+						</li>
+						<li> <a href="{{route('lihat.tahunajaran')}}"><i class="bx bx-right-arrow-alt"></i>Hak Akses</a>
+						</li>
+						
+					</ul>
+
+					<ul>
+						</li>
+						<li> <a href="{{route('lihat.tahunajaran')}}"><i class="bx bx-right-arrow-alt"></i>Maping PBM</a>
+						</li>
+						
+					</ul>
+					
+				</li>
+
+				<li>
+					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-export"></i>
 						</div>
 						<div class="menu-title">Export</div>
@@ -121,13 +136,21 @@
 						
 					</ul>
 
+					<ul>
+						<li> <a href="{{route('export.guru')}}"><i class="bx bx-right-arrow-alt"></i>Export Guru</a>
+						
+					</ul>
+
+
 					<!-- <ul>
 						<li> <a href=""><i class="bx bx-right-arrow-alt"></i>Export Guru</a>
 						
 					</ul> -->
 				</li>
 
-				<li>
+
+
+				<!-- <li>
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-import"></i>
 						</div>
@@ -143,7 +166,7 @@
 						<li> <a href="{{route('lihat.import.guru')}}"><i class="bx bx-right-arrow-alt"></i>Import Guru</a>
 						</li>
 					</ul>
-				</li>
+				</li> -->
 
 				<!-- <li>
 					<a class="has-arrow" href="javascript:;">

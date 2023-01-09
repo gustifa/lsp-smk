@@ -22,9 +22,9 @@ class ImportGuru implements ToModel
             'tempat_lahir' => $row[4],
             'tanggal_lahir' => $row[5],
             'nik' => $row[6],
-            'mapel_id' => $row[7],
-            'agama_id' => $row[8],
-            'jurusan_id' => $row[9],
+            // 'mapel_id' => $row[7],
+            // 'agama_id' => $row[8],
+            // 'jurusan_id' => $row[9],
             // 'RFID_ID' => $row[4],
         ]);
     }

@@ -1,6 +1,10 @@
 @extends('admin.admin_master')
 @section('admin')
 
+@section('title')
+   Agama
+@endsection
+
 <!--start page wrapper -->
 		<div class="page-wrapper">
 			<div class="page-content">
@@ -69,12 +73,6 @@
 										</div>	<!-- AKhir Moodal -->
 
 
-				<!-- <div class="col-lg-3 col-xl-2">
-										<a href="{{route('tambah.agama')}}" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Agama</a>
-
-										
-				</div>
- -->
 
 
 				<hr/>

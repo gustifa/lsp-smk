@@ -18,6 +18,8 @@ use App\Http\Controllers\TahunAjaran\TahunAjaranController;
 use App\Http\Controllers\Rombel\RombelController;
 use App\Http\Controllers\Group\GroupController;
 use App\Http\Controllers\Import\ImportController;
+use App\Http\Controllers\Import\ImportGuruController;
+use App\Http\Controllers\Export\ExportGuruController;
 
 
 /*
@@ -105,6 +107,7 @@ Route::middleware(['auth','role:admin'])->group(function(){
         Route::post('/guru/update/{id}',[GuruController::class,'UpdateGuru'])->name('update.guru');
         Route::post('/guru/simpan',[GuruController::class,'SimpanGuru'])->name('simpan.guru');
         Route::get('/guru/hapus/{id}',[GuruController::class,'HapusGuru'])->name('hapus.guru');
+        Route::get('/template/guru/excel', [GuruController::class,'template_excel_guru'])->name('template.excel.guru');
 
         //Route Mapel
         Route::get('/mapel/lihat',[MapelController::class,'Index'])->name('lihat.mapel');
@@ -134,7 +137,7 @@ Route::middleware(['auth','role:admin'])->group(function(){
         Route::post('/rombel/edit/{id}',[RombelController::class,'EditRombel'])->name('edit.rombel');
         Route::post('/rombel/simpan',[RombelController::class,'SimpanRombel'])->name('simpan.rombel');
         Route::get('/rombel/update/{id}',[RombelController::class,'UpdateRombel'])->name('update.rombel');
-        Route::post('/rombel/hapus/{id}',[RombelController::class,'HapusRombel'])->name('hapus.rombel');
+        Route::get('/rombel/hapus/{id}',[RombelController::class,'HapusRombel'])->name('hapus.rombel');
 
         //Route Group
         Route::get('/group/lihat',[GroupController::class,'LihatGroup'])->name('lihat.group');
@@ -142,10 +145,24 @@ Route::middleware(['auth','role:admin'])->group(function(){
         Route::post('/group/edit/{id}',[GroupController::class,'EditGroup'])->name('edit.group');
         Route::post('/group/simpan',[GroupController::class,'SimpanGroup'])->name('simpan.group');
         Route::get('/group/update/{id}',[GroupController::class,'UpdateGroup'])->name('update.group');
-        Route::post('/group/hapus/{id}',[GroupController::class,'HapusGroup'])->name('hapus.group');
+        Route::get('/group/hapus/{id}',[GroupController::class,'HapusGroup'])->name('hapus.group');
 
 
         
+
+    }); //End Group
+
+    //Route IMPORT
+
+    Route::prefix('import')->group(function(){
+        Route::post('/guru',[ImportGuruController::class,'importGuru'])->name('import.guru');
+
+
+    }); //End Group
+
+    //ROUTE EXPORT
+    Route::prefix('export')->group(function(){
+        Route::get('/guru',[ExportGuruController::class,'ExportGuru'])->name('export.guru');
 
     }); //End Group
 

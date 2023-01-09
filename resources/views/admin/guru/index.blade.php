@@ -23,7 +23,18 @@
 				<!-- Awal Moodal -->
 				<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 											<div class="btn-group" role="group">
-												<button type="button" class="btn btn-primary mb-3 mb-lg-0" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bxs-plus-square'></i> Guru</button>
+												<button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Import</button>
+												<ul class="dropdown-menu" style="margin: 0px;">
+													<li><a class="dropdown-item" href="{{route('template.excel.guru')}}">Download Template</a>
+													</li>
+													<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="">Import Guru</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+											<div class="btn-group" role="group">
+												<a href="{{route('export.guru')}}"><button type="button" class="btn btn-dark" aria-expanded="false"><i class="fadeIn animated bx bx-cloud-download"></i> Download</button></a>
 												
 											</div>
 										</div>
@@ -32,29 +43,22 @@
 											<div class="modal-dialog">
 												<div class="modal-content">
 													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel">Upload Template User</h5>
+														<h5 class="modal-title" id="exampleModalLabel">Upload Template Guru</h5>
 														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 													</div>
 													<div class="modal-body">
-				<form action="{{ route('simpan.guru') }}" method="POST">
+				<form action="{{ route('import.guru') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
 									<div class="mb-3">
-										<label class="form-label">Guru:</label>
-										<input type="text" name="nama" class="form-control" placeholder="Inputkan Nama">
-										@error('nama')
-	 <span class="text-danger">{{ $message }}</span>
-	 @enderror
+										<!-- <label class="form-label">Agama:</label> -->
+										<input type="file" name="file" class="form-control" placeholder="Inputkan Agama">
 									</div>
-
-									<div class="mb-3">
-										<label class="form-label">NIK:</label>
-										<input type="text" name="nik" class="form-control" placeholder="Inputkan Nama">
-										@error('nik')
-	 <span class="text-danger">{{ $message }}</span>
-	 @enderror
-									</div>
-
+									
+									<!-- <div class="mb-3">
+										<button type="submit" class="btn btn-primary px-5"><i class='bx bx-save mr-1'></i>Simpan</button>
+									</div> -->
+								
 
 													</div>
 													<div class="modal-footer">
@@ -67,21 +71,23 @@
 										</div>	<!-- AKhir Moodal -->
 
 
+
 				
 				
 				<hr/>
 
-				<div class="card">
-							<div class="card-body">
-								<table class="table table-bordered mb-0">
-									<thead>
+								<div class="card">
+					<div class="card-body">
+						<div class="table-responsive">
+							<table id="example2" class="table table-striped table-bordered">
+								<thead>
 									<tr>
 										<th>No</th>
 										<th>Nama</th>
-										<th>Mata Pelajaran</th>
-										<th>Kelas</th>
-										<th>Jurusan</th>
-										<th>Aksi</th>
+										<th>NIK</th>
+										<th>Jenis Kelamin</th>
+										<th>Tanggal Lahir</th>
+										<th style="width: 130px;">Aksi</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -89,9 +95,9 @@
 									<tr>
 										<td>{{$key+1}}</td>
 										<td>{{$item->nama}}</td>
-										<td>{{$item->mapel_id}}</td>
-										<td>{{$item->kelas_id}}</td>
-										<td>{{$item->jurusan_id}}</td>
+										<td>{{$item->nik}}</td>
+										<td>{{$item->jenis_kelamin}}</td>
+										<td>{{$item->tanggal_lahir}}</td>
 										<td style="width: 20px;">
 											<a class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" href=""><i class='bx bx-edit mr-1'></i></a>
 											<a class="btn btn-danger" href="{{ route('hapus.guru',$item->id) }}" id="delete"><i class='bx bx-x-circle mr-1'></i></a>
@@ -100,8 +106,10 @@
 									</tr>
 									@endforeach
 								</tbody>
-								</table>
-							</div>
+								
+							</table>
+						</div>
+					</div>
 				</div>
 
 
@@ -140,7 +148,7 @@
 							</table>
 						</div>
 					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 		<!--end page wrapper -->

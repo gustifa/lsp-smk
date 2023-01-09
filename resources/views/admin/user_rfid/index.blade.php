@@ -33,6 +33,13 @@
 											</div>
 										</div>
 
+									<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+											<div class="btn-group" role="group">
+												<a href="{{route('export.userrfid')}}"><button type="button" class="btn btn-dark" aria-expanded="false"><i class="fadeIn animated bx bx-cloud-download"></i> Download</button></a>
+												
+											</div>
+										</div>
+
 										<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
 											<div class="modal-dialog">
 												<div class="modal-content">
