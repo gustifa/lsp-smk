@@ -50,13 +50,13 @@
 				<form action="{{ route('simpan.rombel') }}" method="POST">
             @csrf
 									
-									<div class="mb-3">
+									<!-- <div class="mb-3">
 										<label class="form-label">Nama:</label>
 										<input type="text" name="nama" class="form-control" placeholder="Inputkan Nama">
 										@error('nama')
 										 <span class="text-danger">{{ $message }}</span>
 										 @enderror
-									</div>
+									</div> -->
 
 									<div class="mb-3">
 										<select name="kelas_id" class="form-select mb-3" aria-label="Default select example">
@@ -126,7 +126,7 @@
 									@foreach($dataRombel as $key => $item)
 									<tr>
 										<td>{{$key+1}}</td>
-										<td>{{$item->nama}}</td>
+										<td>{{$item['kelas']['nama'] }} {{$item['jurusan']['kode'] }}{{$item['group']['nama'] }}</td>
 										<td>{{$item['walas']['nama']}}</td>
 										<td style="width: 20px;">
 											<a class="btn btn-info" href="{{ route('edit.rombel',$item->id) }}"><i class='bx bx-edit mr-1'></i></a>

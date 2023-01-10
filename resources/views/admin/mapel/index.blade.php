@@ -24,7 +24,7 @@
 											<div class="btn-group" role="group">
 												<button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Import</button>
 												<ul class="dropdown-menu" style="margin: 0px;">
-													<li><a class="dropdown-item" href="">Download Template</a>
+													<li><a class="dropdown-item" href="{{route('template.excel.mapel')}}">Download Template</a>
 													</li>
 													<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="">Import Mapel</a>
 													</li>
@@ -40,7 +40,7 @@
 														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 													</div>
 													<div class="modal-body">
-				<form action="" method="POST" enctype="multipart/form-data">
+				<form action="{{ route('import.mapel') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
 									<div class="mb-3">
@@ -71,6 +71,7 @@
 									<tr>
 										<th style="width: 8px;">No</th>
 										<th>Nama</th>
+										<th>Kode</th>
 										<th>Aksi</th>
 									</tr>
 								</thead>
@@ -79,6 +80,7 @@
 									<tr>
 										<td>{{$key+1}}</td>
 										<td>{{$item->nama}}</td>
+										<td>{{$item->kode}}</td>
 										
 										<td style="width: 20px;">
 											<a class="btn btn-info" href="">Edit</a>

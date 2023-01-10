@@ -82,7 +82,7 @@
 										<th>Jurusan</th>
 										<th>Group</th>
 										<th>RFID_ID</th>
-										<th>Aksi</th>
+										<td style="width: 20px;">
 								</thead>
 								<tbody>
 									@foreach($dataRfid as $key => $item)

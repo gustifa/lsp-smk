@@ -17,8 +17,10 @@ use App\Http\Controllers\Kelas\KelasController;
 use App\Http\Controllers\TahunAjaran\TahunAjaranController;
 use App\Http\Controllers\Rombel\RombelController;
 use App\Http\Controllers\Group\GroupController;
+
 use App\Http\Controllers\Import\ImportController;
 use App\Http\Controllers\Import\ImportGuruController;
+use App\Http\Controllers\Import\ImportMapelController;
 use App\Http\Controllers\Export\ExportGuruController;
 
 
@@ -123,6 +125,7 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
         //Route Mapel
         Route::get('/mapel/lihat',[MapelController::class,'Index'])->name('lihat.mapel');
+        Route::get('/template/mapel/excel', [MapelController::class,'template_excel_mapel'])->name('template.excel.mapel');
 
         //Route Jurusan
         Route::get('/jurusan/lihat',[JurusanController::class,'LihatJurusan'])->name('lihat.jurusan');
@@ -168,6 +171,7 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
     Route::prefix('import')->group(function(){
         Route::post('/guru',[ImportGuruController::class,'importGuru'])->name('import.guru');
+        Route::post('/mapel',[ImportMapelController::class,'importMapel'])->name('import.mapel');
 
 
     }); //End Group

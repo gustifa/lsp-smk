@@ -75,7 +75,7 @@
 					</ul>
 
 					<ul>
-						<li> <a href="{{route('lihat.user')}}"><i class="bx bx-right-arrow-alt"></i>Siswa</a>
+						<li> <a href="{{route('lihat.user')}}"><i class="bx bx-right-arrow-alt"></i>User RFID</a>
 						</li>
 						
 	

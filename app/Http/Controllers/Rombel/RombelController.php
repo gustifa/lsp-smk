@@ -37,7 +37,7 @@ class RombelController extends Controller
         //     ]);
 
             $data = new Rombel();
-            $data->nama = $request->nama;
+            //$data->nama = $request->nama;
             $data->jurusan_id = $request->jurusan_id;
             $data->kelas_id = $request->kelas_id;
             $data->group_id = $request->group_id;

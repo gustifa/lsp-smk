@@ -18,7 +18,7 @@ class ImportGuruController extends Controller
 	    	);
 
         Excel::import(new ImportGuru, $request->file('file')->store('files'));
-        return redirect()->route('lihat.guru')->with($notification);
+        return redirect()->route('lihat.mapel')->with($notification);
 
 
     }

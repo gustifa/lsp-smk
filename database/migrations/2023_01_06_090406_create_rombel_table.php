@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('rombel', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama');
+            //$table->string('nama');
             //$table->integer('sekolah_id');
             //$table->integer('pembelajaran_id');
             //$table->integer('semester_id');

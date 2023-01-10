@@ -24,10 +24,12 @@
 								<div class="progress my-3 bg-light-transparent" style="height:3px;">
 									<!-- <div class="progress-bar bg-white" role="progressbar" style="width: {{$adminData->count()}}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> -->
 								</div>
+								<a href="{{route('lihat.user')}}">
 								<div class="d-flex align-items-center text-white">
-									<p class="mb-0"><a href="{{route('lihat.user')}}">Total User</a> </p>
+									<p class="mb-0">Total User </p>
 
 								</div>
+								</a>
 							</div>
 						  </div>
 						</div>
@@ -53,9 +55,11 @@
 								<div class="progress my-3 bg-light-transparent" style="height:3px;">
 									<!-- <div class="progress-bar bg-white" role="progressbar" style="width: %" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div> -->
 								</div>
+								<a href="{{route('lihat.user')}}">
 								<div class="d-flex align-items-center text-white">
-									<p class="mb-0">Total Siswa</p>
+									<p class="mb-0">Total User RFID</p>
 								</div>
+								</a>
 							</div>
 						  </div>
 						</div>
@@ -81,7 +85,7 @@
 									<div class="progress-bar bg-white" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 								<div class="d-flex align-items-center text-white">
-									<p class="mb-0">Total Presensi Sholat</p>
+									<p class="mb-0">Total Siswa</p>
 									
 								</div>
 							</div>

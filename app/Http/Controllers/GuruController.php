@@ -70,8 +70,7 @@ class GuruController extends Controller
 
 	    }
 
-	    public function template_excel_guru()
-    {
+	    public function template_excel_guru(){
         $path = public_path('/file/excel/import/import_template/template_excel_guru.xlsx');
         $name = basename($path);
         $headers = ["Content-Type:   application/vnd.ms-excel; charset=utf-8"];
