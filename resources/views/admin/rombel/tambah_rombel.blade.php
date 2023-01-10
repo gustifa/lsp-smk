@@ -28,13 +28,13 @@
 								<form method="post" action="{{ route('simpan.rombel') }}">
 	 	@csrf
 
-									<!-- <div class="mb-3">
-										<label class="form-label">Agama:</label>
-										<input type="text" name="nama" class="form-control" placeholder="Inputkan Agama">
-									</div>
- -->
 									<div class="mb-3">
-										<select class="form-select mb-3" aria-label="Default select example">
+										<label class="form-label">Nama:</label>
+										<input type="text" name="nama" class="form-control" placeholder="Inputkan Nama">
+									</div>
+
+									<div class="mb-3">
+										<select name="kelas_id" class="form-select mb-3" aria-label="Default select example">
 											<option value="" selected="" disabled="">Pilih Kelas</option>
 											@foreach($dataKelas as $item)
 											<option value="{{$item->id}}">{{$item->nama}}</option>
@@ -43,7 +43,7 @@
 									</div>
 
 									<div class="mb-3">
-										<select class="form-select mb-3" aria-label="Default select example">
+										<select name="jurusan_id" class="form-select mb-3" aria-label="Default select example">
 											<option value="" selected="" disabled="">Pilih Jurusan</option>
 											@foreach($dataJurusan as $item)
 											<option value="{{$item->id}}">{{$item->kode}}</option>
@@ -55,6 +55,15 @@
 										<select name="group_id" class="form-select mb-3" aria-label="Default select example">
 											<option value="" selected="" disabled="">Pilih Group</option>
 											@foreach($dataGroup as $item)
+											<option value="{{$item->id}}">{{$item->nama}}</option>
+											@endforeach
+										</select>
+									</div>
+
+									<div class="mb-3">
+										<select name="guru_id" class="form-select mb-3" aria-label="Default select example">
+											<option value="" selected="" disabled="">Pilih Nama Guru</option>
+											@foreach($dataGuru as $item)
 											<option value="{{$item->id}}">{{$item->nama}}</option>
 											@endforeach
 										</select>

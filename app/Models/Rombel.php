@@ -11,4 +11,8 @@ class Rombel extends Model
     protected $table = 'rombel';
 	protected $primaryKey = 'id';
     protected $guarded = [];
+
+    public function walas(){
+		return $this->belongsTo(Guru::class, 'guru_id', 'id');
+	}
 }

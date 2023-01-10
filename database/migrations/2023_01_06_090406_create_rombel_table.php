@@ -16,10 +16,13 @@ return new class extends Migration
         Schema::create('rombel', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
+            //$table->integer('sekolah_id');
+            //$table->integer('pembelajaran_id');
+            //$table->integer('semester_id');
             $table->integer('kelas_id');
             $table->integer('jurusan_id');
             $table->integer('group_id');
-            $table->integer('walas_id');
+            $table->integer('guru_id');
             $table->timestamps();
         });
     }
