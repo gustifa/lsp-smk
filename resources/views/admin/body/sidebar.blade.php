@@ -114,7 +114,7 @@
 
 					<ul>
 						</li>
-						<li> <a href="{{route('lihat.tahunajaran')}}"><i class="bx bx-right-arrow-alt"></i>Maping PBM</a>
+						<li> <a href="{{route('generete.user')}}"><i class="bx bx-right-arrow-alt"></i>Maping PBM</a>
 						</li>
 						
 					</ul>

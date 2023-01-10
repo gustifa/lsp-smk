@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\UserRfid;
 use App\Models\Presensi;
 use App\Models\tblsholat;
+//use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
@@ -96,6 +97,24 @@ class AdminController extends Controller
         return back()->with("status", "Password Change Susccesfully");
 
     } //End Method
+
+
+    public function genereteUser(){
+        // $dataUserRfid = UserRfid::all();
+        // $user =  User::create([
+        //         'username' => 'fauzan',
+        //         'role' => 'siswa',
+        //         'password' => Hash::make('password'),
+        //     ]);
+
+        // $user = new App\Models\User();
+        // $user->password = Hash::make('the-password-of-choice');
+        // $user->email = 'the-email@example.com';
+        // //$user->name = 'My Name';
+        // $user->save();
+
+        return redirect()->route('lihat.user')->with($notification);
+    }
 
 
 

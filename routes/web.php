@@ -80,6 +80,7 @@ Route::middleware(['auth','role:admin'])->group(function(){
         Route::post('/profile/store', [AdminController::class,'AdminProfileStore'])->name('admin.profile.store');
         Route::get('/change/password', [AdminController::class,'AdminChangePassword'])->name('admin.change.password');
         Route::post('/update/password', [AdminController::class,'AdminUpdatePassword'])->name('update.password');
+        Route::get('/generete/user', [AdminController::class,'genereteUser'])->name('generete.user');
 
 
         //Route Presensi
