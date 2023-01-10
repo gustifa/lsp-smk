@@ -22,6 +22,9 @@ use App\Http\Controllers\Import\ImportGuruController;
 use App\Http\Controllers\Export\ExportGuruController;
 
 
+use App\Http\Controllers\Frontend\FrontendController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,9 +36,18 @@ use App\Http\Controllers\Export\ExportGuruController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
+
+
+//FrontEnd
+
+Route::get('/', [FrontendController::class,'FrontendHome'])->name('frontend.home');
 
 Route::controller(App\Http\Controllers\Auth\AuthOtpController::class)->group(function(){
     Route::get('otp/login', 'login')->name('otp.login');
