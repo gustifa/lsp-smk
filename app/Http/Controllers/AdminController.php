@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Hash;
 class AdminController extends Controller
 {
     public function AdminDashboard(){
-         $adminData = User::all();
+         // $adminData = User::all();
+         $adminData = User::where('role','admin')->get();;
          $dataPresensi = Presensi::all();
          $dataUserRfid = UserRfid::all();
          $presensiData = Presensi::all();
@@ -31,7 +32,7 @@ class AdminController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/admin/login');
+        return redirect('/');
     }
 
     public function AdminLogin(){
