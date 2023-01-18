@@ -1,3 +1,7 @@
+  @php
+$dataSekolah = App\Models\Sekolah::find(1);
+        @endphp
+
   <footer id="footer">
 
     <div class="footer-top">
@@ -5,13 +9,13 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Company</h3>
+            <h3>{{$dataSekolah->nama}}</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+             {{$dataSekolah->alamat}} <br>
+              {{$dataSekolah->kabupaten}}<br>
+               {{$dataSekolah->provinsi}} <br><br>
+              <strong>Phone:</strong> {{$dataSekolah->no_telp}}<br>
+              <strong>Email:</strong> {{$dataSekolah->email}}<br>
             </p>
           </div>
 

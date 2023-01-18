@@ -14,11 +14,19 @@ class tblsholat extends Model
 		return $this->belongsTo(UserRfid::class, 'siswa_id', 'Nis');
 	}
 
-	// public function jurusan(){
-	// 	return $this->belongsTo(Jurusan::class, 'id', 'id');
-	// }
+	public function jurusan(){
+		return $this->belongsTo(Jurusan::class, 'Jurusan', 'id');
+	}
 
-	// public function jurusan(){
-	// 	return $this->belongsTo(Jurusan::class, 'id', 'id');
-	// }
+	public function kelas(){
+		return $this->belongsTo(Kelas::class, 'Kelas', 'id');
+	}
+
+	public function group(){
+		return $this->belongsTo(Group::class, 'Group', 'id');
+	}
+
+
+
+	
 }

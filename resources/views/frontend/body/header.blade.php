@@ -30,7 +30,14 @@
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="{{url('/admin/login')}}">Admin Area</a></li>
+
+          <li>
+           
+              
+                <a href="{{url('/admin/login')}}"><div class="btn btn-dark fadeIn animated bx bx-user"> Login</div></a>
+      
+          
+          </li>
 
         </ul>
       </nav><!-- .nav-menu -->
