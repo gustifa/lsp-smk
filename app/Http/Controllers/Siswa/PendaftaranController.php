@@ -32,7 +32,7 @@ class PendaftaranController extends Controller
     		'alert-type' => 'success'
     	);
 
-    	return redirect()->route('siswa.dashboard')->with($notification);
+    	return redirect()->back()->with($notification);
 
 
     }

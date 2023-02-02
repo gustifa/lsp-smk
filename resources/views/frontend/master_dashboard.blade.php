@@ -50,7 +50,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url({{asset('frontend/assets/img/slide/slide-1.jpg')}});">
+        <div class="carousel-item active" style="background-image: url({{asset('frontend/assets/img/slide/slide-4.jpg')}});">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2 class="logo mr-auto">SELAMAT DATANG <span>LSP-P1</span></h2>
