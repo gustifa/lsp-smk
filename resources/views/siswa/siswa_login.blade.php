@@ -35,7 +35,7 @@
 							<div class="card-body">
 								<div class="border p-4 rounded">
 									<div class="text-center">
-										<h3 class="">Admin Login</h3>
+										<h3 class="">Siswa Login</h3>
 										<!-- <p>Don't have an account yet? <a href="{{route('register')}}">Sign up here</a>
 										</p> -->
 									</div>

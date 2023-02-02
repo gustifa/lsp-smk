@@ -1,7 +1,7 @@
 @extends('frontend.master_dashboard')
 @section('main')
-@section('judul')
-    ApoSMK || Aplikasi Presensi Online
+@section('title')
+    LSP-P1 || SMK NEGERI 1 KINALI
 @endsection
 
 <!-- ======= About Us Section ======= -->

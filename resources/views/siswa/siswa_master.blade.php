@@ -38,32 +38,32 @@
 					<img src="{{asset('backend/assets/images/logo-icon.png')}}" class="logo-icon" alt="logo icon">
 				</div>
 				<div>
-					<h4 class="logo-text">Admin</h4>
+					<h4 class="logo-text">Siswa</h4>
 				</div>
 				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
 				</div>
 			</div>
 			<!--navigation-->
-			@include('admin.body.sidebar')
+			@include('siswa.body.sidebar')
 			<!--end navigation-->
 		</div>
 		<!--end sidebar wrapper -->
 		<!--start header -->
-		@include('admin.body.header')
+		@include('siswa.body.header')
 		<!--end header -->
 		<!--start page wrapper -->
-		@yield('admin');
+		@yield('siswa');
 		<!--end page wrapper -->
 		<!--start overlay-->
 		<div class="overlay toggle-icon"></div>
 		<!--end overlay-->
 		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
-		@include('admin.body.footer')
+		@include('siswa.body.footer')
 	</div>
 	<!--end wrapper-->
 	<!--start switcher-->
-	@include('admin.body.setting')
+	@include('siswa.body.setting')
 	<!--end switcher-->
 	<!-- Bootstrap JS -->
 	<script src="{{asset('backend/assets/js/bootstrap.bundle.min.js')}}"></script>

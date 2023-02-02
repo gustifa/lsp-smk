@@ -25,6 +25,8 @@ use App\Http\Controllers\Export\ExportGuruController;
 
 
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Siswa\SiswaController;
+use App\Http\Controllers\Siswa\PendaftaranController;
 
 
 /*
@@ -69,11 +71,12 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
+Route::get('/admin/login', [AdminController::class,'AdminLogin'])->name('admin.login');
 Route::middleware(['auth','role:admin'])->group(function(){
         //Route Dahboard
     //Route::get('/admin/dashboard',[DahboardController::class,'AdminDashboard'])->name('admin.dashboard');
     Route::prefix('admin')->group(function(){
+        
         Route::get('/dashboard', [AdminController::class,'AdminDashboard'])->name('admin.dashboard');
         Route::get('/logout', [AdminController::class,'AdminDestroy'])->name('admin.logout');
         Route::get('/profile', [AdminController::class,'AdminProfile'])->name('admin.profile');
@@ -168,6 +171,8 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
     }); //End Group
 
+
+
     //Route IMPORT
 
     Route::prefix('import')->group(function(){
@@ -190,7 +195,32 @@ Route::middleware(['auth','role:user'])->group(function(){
     Route::get('/user/dashboard', [VendorController::class,'VendorDashboard'])->name('vendor.dashboard');
 });
 
-Route::get('/admin/login', [AdminController::class,'AdminLogin'])->name('admin.login');
+
+
+
+Route::prefix('pendaftaran')->group(function(){
+
+        //Route Sekolah
+        Route::get('/siswa',[PendaftaranController::class,'Daftar'])->name('daftar');
+        Route::post('/siswa/simpan',[PendaftaranController::class,'DaftarSimpan'])->name('simpan.pendaftaran.siswa');
+
+
+        
+
+    }); //End Group
+
+
+Route::prefix('siswa')->group(function(){
+
+        //Route Sekolah
+        Route::get('/dashboard',[SiswaController::class,'SiswaDashboard'])->name('siswa.dashboard');
+        Route::get('/login', [SiswaController::class,'SiswaLogin'])->name('siswa.login');
+         Route::get('/logout', [SiswaController::class,'SiswaDestroy'])->name('siswa.logout');
+
+
+        
+
+    }); //End Group
 
 
 

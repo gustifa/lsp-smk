@@ -24,47 +24,93 @@
 <body class="bg-login">
 	<!--wrapper-->
 	<div class="wrapper">
-		<div class="section-authentication-signin d-flex align-items-center justify-content-center my-5 my-lg-0">
-			<div class="container-fluid">
-				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+		<div class="d-flex align-items-center justify-content-center my-5 my-lg-0">
+			<div class="container">
+				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
 					<div class="col mx-auto">
-						<div class="mb-4 text-center">
-							<img src="{{asset('backend/assets/images/logo-img.png')}}" width="180" alt="" />
+						<div class="my-4 text-center">
+							<img src="assets/images/logo-img.png" width="180" alt="" />
 						</div>
 						<div class="card">
 							<div class="card-body">
 								<div class="border p-4 rounded">
 									<div class="text-center">
-										<h3 class="">Admin Login</h3>
-										<!-- <p>Don't have an account yet? <a href="{{route('register')}}">Sign up here</a>
-										</p> -->
+										<h3 class="">FORM PENDAFTARAN</h3>
+										<p>Sudah Register <a href="{{url('/siswa/login')}}">Sign in</a>
+										</p>
 									</div>
 									
-									
 									<div class="form-body">
-										<form class="row g-3" method="POST" action="{{ route('login') }}">
-											   @csrf
-											<div class="col-12">
-												<label for="inputEmailAddress" class="form-label">Username</label>
-												<input type="text" name="username" class="form-control" id="inputEmailAddress" placeholder="Username">
+										<form class="row g-3" method="post" action="{{route('simpan.pendaftaran.siswa')}}" enctype="multipart/form-data">
+	 	@csrf
+									
+											<div class="col-sm-6">
+												<label for="inputFirstName" class="form-label">Nama Lengkap</label>
+												<input type="text" name="name" class="form-control" id="inputFirstName" placeholder="Alfatih Riski">
 											</div>
-											<div class="col-12">
+
+											<div class="col-sm-6">
+												<label for="inputFirstName" class="form-label">Email</label>
+												<input type="email" name="email" class="form-control" placeholder="alfatihriski@gmail.com">
+											</div>
+											
+											<div class="col-6">
+												<label for="inputEmailAddress" class="form-label">Username</label>
+												<input type="text" name="username" class="form-control" id="inputEmailAddress" placeholder="username">
+											</div>
+											<div class="col-6">
 												<label for="inputChoosePassword" class="form-label">Password</label>
 												<div class="input-group" id="show_hide_password">
 													<input type="password" name="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 												</div>
 											</div>
-											<div class="col-md-6">
-												<div class="form-check form-switch">
-													<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-													<label class="form-check-label" for="flexSwitchCheckChecked">Remember Me</label>
+
+											<!-- <div class="col-6">
+												<label for="inputEmailAddress" class="form-label">Tempat Lahir</label>
+												<input type="text" name="tempat_lahir" class="form-control" id="inputEmailAddress" placeholder="username">
+											</div>
+											<div class="col-6">
+												<label for="inputChoosePassword" class="form-label">Tanggal Lahir</label>
+												<div class="input-group" id="show_hide_password">
+													<input type="date" name="tgl_lahir" class="form-control border-end-0">
 												</div>
+											</div> -->
+											
+
+											<!-- <div class="col-sm-6">
+												<label for="inputSelectCountry" class="form-label">Jurusan</label>
+												<select name="jurusan" class="form-select" id="inputSelectCountry" aria-label="Default select example">
+													<option value="" selected="" disabled="">Pilih Jurusan</option>
+													 @foreach($dataJurusan as $item)
+													<option value="{{ $item->id }}">{{ $item->kode }}</option>
+												 	@endforeach
+												</select>
 											</div>
-											<div class="col-md-6 text-end">	<a href="authentication-forgot-password.html">Forgot Password ?</a>
+											<div class="col-sm-6">
+												<label for="inputSelectCountry" class="form-label">Jurusan</label>
+												<select name="jenis_kelamin" class="form-select" id="inputSelectCountry" aria-label="Default select example">
+													<option value="" selected="" disabled="">Jenis Kelamin</option>
+													
+													<option value="Laki-Laki">Laki-Laki</option>
+													<option value="Perempuan">Perempuan</option>
+												 	
+												</select>
 											</div>
+
+											<div class="col-12">
+												<label for="inputSelectCountry" class="form-label">Asesor</label>
+												<select name="asesor" class="form-select" id="inputSelectCountry" aria-label="Default select example">
+													<option value="" selected="" disabled="">Pilih Asesor</option>
+													 @foreach($dataJurusan as $item)
+													<option value="{{ $item->id }}">{{ $item->kode }}</option>
+												 	@endforeach
+												</select>
+											</div> -->
+											
 											<div class="col-12">
 												<div class="d-grid">
-													<button type="submit" class="btn btn-primary"><i class="bx bxs-lock-open"></i>Sign in</button>
+													<input type="submit" class="btn btn-primary" value="Daftar">
+													<!-- <button type="submit" class="btn btn-primary"><i class='bx bx-user'></i>Daftar</button> -->
 												</div>
 											</div>
 										</form>

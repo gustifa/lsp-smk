@@ -1,7 +1,7 @@
  <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="{{url('/')}}"><span>apo</span>SMK</a></h1>
+      <h1 class="logo mr-auto"><a href="{{url('/')}}"><span>LSP </span>P-1</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -34,7 +34,7 @@
           <li>
            
               
-                <a href="{{url('/admin/login')}}"><div class="btn btn-dark fadeIn animated bx bx-user"> Login</div></a>
+                <a href="{{route('admin.login')}}"><div class="btn btn-dark fadeIn animated bx bx-user"> Login</div></a>
       
           
           </li>
