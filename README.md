@@ -1,4 +1,4 @@
-<h1 align="center">apoSMK</h1>
+<h1 align="center">LSP-P1</h1>
 
 <!-- <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
