@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p> -->
 
-## About apoSMK
+## About LSP-P1
 
-ApoSMK merupakan Aplikasi Presensi Online. 
+Aplikasi LSP-P1 merupakan aplikasi rekap data khusus untuk LSP
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
