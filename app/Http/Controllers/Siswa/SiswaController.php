@@ -6,14 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Jurusan;
 
 use Illuminate\Support\Facades\Hash;
 
 class SiswaController extends Controller
 {
     public function SiswaDashboard(){
-    	 $adminData = User::where('role','siswa')->get();;
-    	return view('siswa.index',compact('adminData'));
+        $id = Auth::user()->id;
+        $dataSiswa = User::find($id);
+    	return view('siswa.index', compact('dataSiswa'));
     }
 
     public function SiswaLogin(){
@@ -29,5 +31,163 @@ class SiswaController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+
+    public function SiswaProfileStore(Request $request){
+        $id = Auth::user()->id;
+        $data = User::find($id);
+        $data->name = $request->name;
+        $data->username = $request->username;
+        $data->email = $request->email;
+        $data->phone = $request->phone;
+        $data->address = $request->address;
+        
+
+        if ($request->file('photo')) {
+            $file = $request->file('photo');
+            @unlink(public_path('upload/siswa_images/'.$data->photo));
+            $filename = date('YmdHi').$file->getClientOriginalName();
+            $file->move(public_path('upload/siswa_images'),$filename);
+            $data['photo'] = $filename;
+        }
+
+        $notification = array(
+            'message' => 'SiswaProfile Update Succesfully',
+            'alert-type' => 'success',
+        );
+
+        $data->save();
+        return redirect()->back()->with($notification);
+
+
+
+        
+    }
+    public function siswaData(){
+        $id = Auth::user()->id;
+        $dataSiswa = User::find($id);
+        $dataJurusan = Jurusan::all();
+        return view('siswa.siswa_data', compact('dataSiswa', 'dataJurusan'));
+
+    }
+
+    public function UpdateData(Request $request){
+        $id = Auth::user()->id;
+        $data = User::find($id);
+ 
+            $file = $request->file('kk');
+            @unlink(public_path('upload/pendaftaran_images/'.$data->kk));
+            $filename = $data->name.'_kk_'.$file->getClientOriginalName();
+            $file->move(public_path('upload/pendaftaran_images'),$filename);
+            $data['kk'] = $filename;
+
+            $file = $request->file('ktp');
+            @unlink(public_path('upload/pendaftaran_images/'.$data->ktp));
+            $filename = $data->name.'_ktp_'.$file->getClientOriginalName();
+            $file->move(public_path('upload/pendaftaran_images'),$filename);
+            $data['ktp'] = $filename;
+
+            $file = $request->file('sertifikat');
+            @unlink(public_path('upload/pendaftaran_images/'.$data->sertifikat));
+            $filename = $data->name.'_sertifikat_'.$file->getClientOriginalName();
+            $file->move(public_path('upload/pendaftaran_images'),$filename);
+            $data['sertifikat'] = $filename;
+        
+
+        $notification = array(
+            'message' => 'SiswaProfile Update Succesfully',
+            'alert-type' => 'success',
+        );
+
+        $data->save();
+        return redirect()->back()->with($notification);
+
+    }
+
+    public function KtpSiswa(){
+        $id = Auth::user()->id;
+        $dataSiswa = User::find($id);
+        $dataJurusan = Jurusan::all();
+        return view('siswa.upload_ktp_siswa', compact('dataSiswa', 'dataJurusan'));
+
+    }
+
+    public function UploadKtpSiswa(Request $request){
+        $id = Auth::user()->id;
+        $data = User::find($id);
+ 
+            
+            $file = $request->file('ktp');
+            @unlink(public_path('upload/pendaftaran_images/'.$data->ktp));
+            $filename = $data->name.'_ktp_'.$file->getClientOriginalName();
+            $file->move(public_path('upload/pendaftaran_images'),$filename);
+            $data['ktp'] = $filename;
+
+        $notification = array(
+            'message' => 'KTP Berhasil di Upload',
+            'alert-type' => 'success',
+        );
+
+        $data->save();
+        return redirect()->back()->with($notification);
+
+    }
+
+    public function KkSiswa(){
+        $id = Auth::user()->id;
+        $dataSiswa = User::find($id);
+        $dataJurusan = Jurusan::all();
+        return view('siswa.upload_kk_siswa', compact('dataSiswa', 'dataJurusan'));
+
+    }
+
+    public function UploadKkSiswa(Request $request){
+        $id = Auth::user()->id;
+        $data = User::find($id);
+ 
+            
+            $file = $request->file('kk');
+            @unlink(public_path('upload/pendaftaran_images/'.$data->kk));
+            $filename = $data->name.'_kk_'.$file->getClientOriginalName();
+            $file->move(public_path('upload/pendaftaran_images'),$filename);
+            $data['kk'] = $filename;
+
+        $notification = array(
+            'message' => 'KK Berhasil di Upload',
+            'alert-type' => 'success',
+        );
+
+        $data->save();
+        return redirect()->back()->with($notification);
+
+    }
+
+    public function SertifikatSiswa(){
+        $id = Auth::user()->id;
+        $dataSiswa = User::find($id);
+        $dataJurusan = Jurusan::all();
+        return view('siswa.upload_sertifikat_siswa', compact('dataSiswa', 'dataJurusan'));
+
+    }
+
+    public function UploadSertifikatSiswa(Request $request){
+        $id = Auth::user()->id;
+        $data = User::find($id);
+ 
+            
+            $file = $request->file('sertifikat');
+            @unlink(public_path('upload/pendaftaran_images/'.$data->sertifikat));
+            $filename = $data->name.'_sertifikat_'.$file->getClientOriginalName();
+            $file->move(public_path('upload/pendaftaran_images'),$filename);
+            $data['sertifikat'] = $filename;
+
+        $notification = array(
+            'message' => 'Sertifikat Berhasil di Upload',
+            'alert-type' => 'success',
+        );
+
+        $data->save();
+        return redirect()->back()->with($notification);
+
     }
 }

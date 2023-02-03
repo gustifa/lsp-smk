@@ -18,6 +18,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('username')->nullable();
             $table->string('email')->unique();
+            $table->string('no_pendaftaran')->nullable();
+            $table->string('nik')->nullable();
+            $table->string('ktp')->nullable();
+            $table->string('kk')->nullable();
+            $table->string('sertifikat')->nullable();
+            $table->string('tempat_lahir')->nullable();
+            $table->date('tanggal_lahir')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('photo')->nullable();

@@ -35,7 +35,7 @@
 							<div class="card-body">
 								<div class="border p-4 rounded">
 									<div class="text-center">
-										<h3 class="">FORM PENDAFTARAN</h3>
+										<h3 class="">Form Pendaftaran</h3>
 										<p>Sudah Register <a href="{{url('/siswa/login')}}">Sign in</a>
 										</p>
 									</div>
@@ -65,27 +65,34 @@
 												</div>
 											</div>
 
-											<!-- <div class="col-6">
+											<div class="col-6">
 												<label for="inputEmailAddress" class="form-label">Tempat Lahir</label>
 												<input type="text" name="tempat_lahir" class="form-control" id="inputEmailAddress" placeholder="username">
 											</div>
 											<div class="col-6">
 												<label for="inputChoosePassword" class="form-label">Tanggal Lahir</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="date" name="tgl_lahir" class="form-control border-end-0">
+													<input type="date" name="tanggal_lahir" class="form-control border-end-0">
 												</div>
-											</div> -->
+											</div>
+											<div class="col-12">
+												<label for="inputChoosePassword" class="form-label">NIK</label>
+												<div class="input-group" id="show_hide_password">
+													<input type="text" name="nik" class="form-control border-end-0">
+												</div>
+											</div>
 											
 
-											<!-- <div class="col-sm-6">
-												<label for="inputSelectCountry" class="form-label">Jurusan</label>
+											 <!-- <div class="col-sm-6">
+												<label for="inputSelectCountry" class="form-label">Program Keahlian</label>
 												<select name="jurusan" class="form-select" id="inputSelectCountry" aria-label="Default select example">
 													<option value="" selected="" disabled="">Pilih Jurusan</option>
 													 @foreach($dataJurusan as $item)
 													<option value="{{ $item->id }}">{{ $item->kode }}</option>
 												 	@endforeach
 												</select>
-											</div>
+											</div> -->
+											<!--
 											<div class="col-sm-6">
 												<label for="inputSelectCountry" class="form-label">Jurusan</label>
 												<select name="jenis_kelamin" class="form-select" id="inputSelectCountry" aria-label="Default select example">
@@ -109,8 +116,8 @@
 											
 											<div class="col-12">
 												<div class="d-grid">
-													<input type="submit" class="btn btn-primary" value="Daftar">
-													<!-- <button type="submit" class="btn btn-primary"><i class='bx bx-user'></i>Daftar</button> -->
+													<!-- <input type="submit" class="btn btn-primary" value="Daftar"> -->
+													<button type="submit" class="btn btn-primary"><i class='bx bx-user'></i>Daftar</button>
 												</div>
 											</div>
 										</form>
@@ -150,6 +157,29 @@
 		});
 	</script>
 	<!--app JS-->
+	<script>
+ @if(Session::has('message'))
+ var type = "{{ Session::get('alert-type','info') }}"
+ switch(type){
+    case 'info':
+    toastr.info(" {{ Session::get('message') }} ");
+    break;
+
+    case 'success':
+    toastr.success(" {{ Session::get('message') }} ");
+    break;
+
+    case 'warning':
+    toastr.warning(" {{ Session::get('message') }} ");
+    break;
+
+    case 'error':
+    toastr.error(" {{ Session::get('message') }} ");
+    break; 
+ }
+ @endif 
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 	<script src="{{asset('backend/assets/js/app.js')}}"></script>
 </body>
 

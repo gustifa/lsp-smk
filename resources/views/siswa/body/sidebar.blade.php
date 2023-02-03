@@ -16,10 +16,16 @@
 						<div class="menu-title">Lengkapi Data</div>
 					</a>
 					<ul>
+						<li> <a href="{{route('ktp.siswa')}}"><i class="bx bx-right-arrow-alt"></i>Upload KTP</a>
 						</li>
-						<li> <a href="app-to-do.html"><i class="bx bx-right-arrow-alt"></i>Rekap</a>
+
+						<li> <a href="{{route('kk.siswa')}}"><i class="bx bx-right-arrow-alt"></i>Upload KK</a>
 						</li>
-						<li> <a href="app-invoice.html"><i class="bx bx-right-arrow-alt"></i>Ambil Presensi</a>
+						<li> <a href="{{route('sertifikat.siswa')}}"><i class="bx bx-right-arrow-alt"></i>Upload Sertifikat</a>
+						</li>
+						<li> <a href="{{route('sertifikat.siswa')}}"><i class="bx bx-right-arrow-alt"></i>Upload Raport</a>
+						</li>
+						<li> <a href="{{route('siswa.data')}}"><i class="bx bx-right-arrow-alt"></i>Rekap</a>
 						</li>
 						<li> <a href="app-fullcalender.html"><i class="bx bx-right-arrow-alt"></i>Cetak</a>
 						</li>

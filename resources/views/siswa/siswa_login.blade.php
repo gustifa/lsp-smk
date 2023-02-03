@@ -36,7 +36,7 @@
 								<div class="border p-4 rounded">
 									<div class="text-center">
 										<h3 class="">Siswa Login</h3>
-										<p>Belum Register <a href="{{route('daftar')}}">Sign up here</a>
+										<p>Belum Daftar <a href="{{route('daftar')}}">Daftar disini</a>
 										</p>
 										<p>Halaman Home <a href="{{url('/')}}">Home</a>
 										</p>
@@ -56,14 +56,14 @@
 													<input type="password" name="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 												</div>
 											</div>
-											<div class="col-md-6">
+											<!-- <div class="col-md-6">
 												<div class="form-check form-switch">
 													<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
 													<label class="form-check-label" for="flexSwitchCheckChecked">Remember Me</label>
 												</div>
 											</div>
 											<div class="col-md-6 text-end">	<a href="authentication-forgot-password.html">Forgot Password ?</a>
-											</div>
+											</div> -->
 											<div class="col-12">
 												<div class="d-grid">
 													<button type="submit" class="btn btn-primary"><i class="bx bxs-lock-open"></i>Sign in</button>

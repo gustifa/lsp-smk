@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('siswa', function (Blueprint $table) {
             $table->id();
+            $table->string('no_pendaftaran');
+            $table->string('kk');
+            $table->string('ktp');
+            $table->string('rapor');
+            $table->string('tempat_lahir');
+            $table->date('tgl_lahir');
             $table->timestamps();
         });
     }

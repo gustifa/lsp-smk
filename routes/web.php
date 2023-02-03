@@ -211,11 +211,25 @@ Route::prefix('pendaftaran')->group(function(){
 
 
 Route::prefix('siswa')->group(function(){
-
-        //Route Sekolah
         Route::get('/dashboard',[SiswaController::class,'SiswaDashboard'])->name('siswa.dashboard');
         Route::get('/login', [SiswaController::class,'SiswaLogin'])->name('siswa.login');
+         // Route::get('/profile', [SiswaController::class,'Profile'])->name('siswa.profile');
+         Route::post('/profile/store', [SiswaController::class,'SiswaProfileStore'])->name('siswa.profile.store');
          Route::get('/logout', [SiswaController::class,'SiswaDestroy'])->name('siswa.logout');
+
+         Route::get('/data',[SiswaController::class,'SiswaData'])->name('siswa.data');
+         Route::post('/data/update', [SiswaController::class,'UpdateData'])->name('siswa.data.update');
+
+         Route::get('/upload/ktp', [SiswaController::class,'KtpSiswa'])->name('ktp.siswa');
+         Route::post('/upload/ktp/simpan', [SiswaController::class,'UploadKtpSiswa'])->name('upload.ktp.siswa');
+
+         Route::get('/upload/kk', [SiswaController::class,'KkSiswa'])->name('kk.siswa');
+         Route::post('/upload/kk/simpan', [SiswaController::class,'UploadKkSiswa'])->name('upload.kk.siswa');
+
+          Route::get('/upload/sertifikat', [SiswaController::class,'SertifikatSiswa'])->name('sertifikat.siswa');
+         Route::post('/upload/sertifikat/simpan', [SiswaController::class,'UploadSertifikatSiswa'])->name('upload.sertifikat.siswa');
+
+
 
 
         
