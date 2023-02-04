@@ -50,7 +50,7 @@ class PendaftaranController extends Controller
         $final_id_no = $date.($id_no);
         $user = new User();
         $user->no_pendaftaran = $final_id_no;
-    	$user->name = strtolower($request->name);
+    	$user->name = strtoupper($request->name);
         $user->nik = $request->nik;
         $user->tempat_lahir = $request->tempat_lahir;
         $user->tanggal_lahir = $request->tanggal_lahir;

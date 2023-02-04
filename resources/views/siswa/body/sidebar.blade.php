@@ -27,7 +27,7 @@
 						</li>
 						<li> <a href="{{route('siswa.data')}}"><i class="bx bx-right-arrow-alt"></i>Rekap</a>
 						</li>
-						<li> <a href="app-fullcalender.html"><i class="bx bx-right-arrow-alt"></i>Cetak</a>
+						<li> <a href="{{route('pendaftaran.pdf')}}"><i class="bx bx-right-arrow-alt"></i>Cetak</a>
 						</li>
 					</ul>
 				</li>

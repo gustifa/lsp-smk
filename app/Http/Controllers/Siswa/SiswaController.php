@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Jurusan;
+use PDF;
 
 use Illuminate\Support\Facades\Hash;
 
@@ -188,6 +189,17 @@ class SiswaController extends Controller
 
         $data->save();
         return redirect()->back()->with($notification);
+
+    }
+
+    public function PendaftaranPdf(Request $request){
+        $id = Auth::user()->id;
+        $allSiswa = User::find($id);
+        //$allSiswa = User::all();
+        //return view('siswa.pendaftaran_siswa', compact('allSiswa'));
+    $pdf = PDF::loadView('siswa.pendaftaran_siswa', compact('allSiswa'));
+    // //$pdf->SetProtection(['copy', 'print'], '', 'pass');
+    return $pdf->stream('bukti_pendaftaran.pdf');
 
     }
 }

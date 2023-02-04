@@ -11,7 +11,10 @@
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "maatwebsite/excel": "^3.1",
+        "mpdf/mpdf": "v8.0.17",
+        "niklasravnsborg/laravel-pdf": "^4.1",
         "phpoffice/phpspreadsheet": "^1.26",
+        "psr/log": "v2.*",
         "twilio/sdk": "^6.44",
         "webklex/laravel-pdfmerger": "^1.3"
     },

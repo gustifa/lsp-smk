@@ -229,6 +229,9 @@ Route::prefix('siswa')->group(function(){
           Route::get('/upload/sertifikat', [SiswaController::class,'SertifikatSiswa'])->name('sertifikat.siswa');
          Route::post('/upload/sertifikat/simpan', [SiswaController::class,'UploadSertifikatSiswa'])->name('upload.sertifikat.siswa');
 
+         //PDF
+         Route::get('/pendaftaran/pdf', [SiswaController::class,'PendaftaranPdf'])->name('pendaftaran.pdf');
+
 
 
 
