@@ -72,6 +72,23 @@ class SiswaController extends Controller
 
     }
 
+        public function UpdateDataIsian(Request $request){
+        $id = Auth::user()->id;
+        $data = User::find($id);
+            $data->tempat_lahir = $request->tempat_lahir;
+            $data->tanggal_lahir = $request->tanggal_lahir;
+            $data->address = $request->address;
+            $data->jurusan_id = $request->jurusan;
+            $data->save();
+
+        $notification = array(
+            'message' => 'Pendaftaran Update Succesfully',
+            'alert-type' => 'success',
+        );
+        return redirect()->back()->with($notification);
+
+    }
+
     public function UpdateData(Request $request){
         $id = Auth::user()->id;
         $data = User::find($id);

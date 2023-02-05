@@ -46,33 +46,33 @@
 									
 											<div class="col-sm-6">
 												<label for="inputFirstName" class="form-label">Nama Lengkap</label>
-												<input type="text" name="name" class="form-control" id="inputFirstName" placeholder="Alfatih Riski">
+												<input type="text" name="name" class="form-control" id="inputFirstName" required="" placeholder="Alfatih Riski">
 											</div>
 
 											<div class="col-sm-6">
 												<label for="inputFirstName" class="form-label">Email</label>
-												<input type="email" name="email" class="form-control" placeholder="alfatihriski@gmail.com">
+												<input type="email" name="email" class="form-control" required="" placeholder="alfatihriski@gmail.com">
 											</div>
 											
 											<div class="col-6">
 												<label for="inputEmailAddress" class="form-label">Username</label>
-												<input type="text" name="username" class="form-control" id="inputEmailAddress" placeholder="username">
+												<input type="text" name="username" required="" class="form-control" id="inputEmailAddress" placeholder="username">
 											</div>
 											<div class="col-6">
 												<label for="inputChoosePassword" class="form-label">Password</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" name="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+													<input type="password" required="" name="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 												</div>
 											</div>
 
 											<div class="col-6">
 												<label for="inputEmailAddress" class="form-label">Tempat Lahir</label>
-												<input type="text" name="tempat_lahir" class="form-control" id="inputEmailAddress" placeholder="username">
+												<input type="text" name="tempat_lahir" required="" class="form-control" id="inputEmailAddress" placeholder="username">
 											</div>
 											<div class="col-6">
 												<label for="inputChoosePassword" class="form-label">Tanggal Lahir</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="date" name="tanggal_lahir" class="form-control border-end-0">
+													<input type="date" name="tanggal_lahir" required="" class="form-control border-end-0">
 												</div>
 											</div>
 											<div class="col-12">

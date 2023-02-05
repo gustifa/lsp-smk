@@ -85,7 +85,7 @@
   <tr>
     <td>4</td>
     <td><b>Program Keahlian</b></td>
-    <td>Teknik Elektronika</td>
+    <td>{{ $allSiswa->jurusan->nama }}</td>
   </tr>
 
   <tr>

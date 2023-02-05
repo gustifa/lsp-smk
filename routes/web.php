@@ -225,7 +225,8 @@ Route::prefix('siswa')->group(function(){
          Route::get('/logout', [SiswaController::class,'SiswaDestroy'])->name('siswa.logout');
 
          Route::get('/data',[SiswaController::class,'SiswaData'])->name('siswa.data');
-         Route::post('/data/update', [SiswaController::class,'UpdateData'])->name('siswa.data.update');
+         Route::post('/data/update', [SiswaController::class,'UpdateDataIsian'])->name('siswa.data.update');
+         // Route::post('/data/update', [SiswaController::class,'UpdateData'])->name('siswa.data.update');
 
          Route::get('/upload/ktp', [SiswaController::class,'KtpSiswa'])->name('ktp.siswa');
          Route::post('/upload/ktp/simpan', [SiswaController::class,'UploadKtpSiswa'])->name('upload.ktp.siswa');

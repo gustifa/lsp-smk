@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('kk')->nullable();
             $table->string('sertifikat')->nullable();
             $table->string('tempat_lahir')->nullable();
+            $table->string('jurusan_id')->nullable();
             $table->date('tanggal_lahir')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

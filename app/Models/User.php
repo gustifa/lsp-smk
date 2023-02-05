@@ -19,6 +19,10 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $guarded = [];
 
+    public function jurusan(){
+        return $this->belongsTo(Jurusan::class, 'jurusan_id', 'id');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
