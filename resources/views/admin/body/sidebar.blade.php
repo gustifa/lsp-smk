@@ -1,11 +1,13 @@
 <ul class="metismenu" id="menu">
-	<li>
+				<li>
 					<a href="{{route('admin.dashboard')}}">
 						<div class="parent-icon"><i class='bx bx-home'></i>
 						</div>
 						<div class="menu-title">Dashboard</div>
 					</a>
 				</li>
+
+				
 				
 
 				<li class="menu-label">Master Data</li>
@@ -31,12 +33,12 @@
 						<div class="menu-title">Setting Data</div>
 					</a>
 					
-					<ul>
+					<!-- <ul>
 						</li>
-						<li> <a href="{{route('lihat.agama')}}"><i class="bx bx-right-arrow-alt"></i>Agama</a>
+						<li> <a href="{{route('data.lsp')}}"><i class="bx bx-right-arrow-alt"></i>Data LSP</a>
 						</li>
 						
-					</ul>
+					</ul> -->
 
 					<ul>
 						<li> <a href="{{route('lihat.jurusan')}}"><i class="bx bx-right-arrow-alt"></i>Jurusan</a>
@@ -44,7 +46,14 @@
 						
 	
 					</ul>
+
 					<ul>
+						<li> <a href="{{route('lihat.jurusan')}}"><i class="bx bx-right-arrow-alt"></i>Asesor </a>
+						</li>
+						
+	
+					</ul>
+					<!-- <ul>
 						<li> <a href="{{route('lihat.kelas')}}"><i class="bx bx-right-arrow-alt"></i>Kelas</a>
 						</li>
 						
@@ -86,10 +95,10 @@
 						</li>
 						
 	
-					</ul>
+					</ul> -->
 				</li>
 
-				<li>
+				<!-- <li>
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-cog"></i>
 						</div>
@@ -119,9 +128,9 @@
 						
 					</ul>
 					
-				</li>
+				</li> -->
 
-				<li>
+				<!-- <li>
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-export"></i>
 						</div>
@@ -142,13 +151,16 @@
 					</ul>
 
 
-					<!-- <ul>
-						<li> <a href=""><i class="bx bx-right-arrow-alt"></i>Export Guru</a>
-						
-					</ul> -->
+					
+				</li> -->
+
+				<li>
+					<a href="{{route('data.lsp')}}">
+						<div class="parent-icon"><i class='bx bx-data'></i>
+						</div>
+						<div class="menu-title">Pendaftar LSP-P1</div>
+					</a>
 				</li>
-
-
 
 				<!-- <li>
 					<a href="javascript:;" class="has-arrow">
@@ -196,7 +208,7 @@
 					</ul>
 				</li> -->
 				
-				<li class="menu-label">Presensi Sholat</li>
+				<!-- <li class="menu-label">Presensi Sholat</li>
 				<li>
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-scan"></i>
@@ -215,9 +227,9 @@
 						</li>
 
 					</ul>
-				</li>
+				</li> -->
 
-				<li class="menu-label">Presensi PBM</li>
+				<!-- <li class="menu-label">Presensi PBM</li>
 
 				<li>
 					<a href="javascript:;" class="has-arrow">
@@ -234,7 +246,7 @@
 						<li> <a href="app-fullcalender.html"><i class="bx bx-right-arrow-alt"></i>Cetak</a>
 						</li>
 					</ul>
-				</li>
+				</li> -->
 
 
 			</ul>

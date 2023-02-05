@@ -28,6 +28,8 @@ use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Siswa\SiswaController;
 use App\Http\Controllers\Siswa\PendaftaranController;
 
+use App\Http\Controllers\Backend\LspController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -73,6 +75,11 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 Route::get('/admin/login', [AdminController::class,'AdminLogin'])->name('admin.login');
 Route::middleware(['auth','role:admin'])->group(function(){
+    Route::prefix('lsp')->group(function(){
+        Route::get('/data',[SiswaController::class,'DataLsp'])->name('data.lsp');
+        
+    }); //End Group
+
         //Route Dahboard
     //Route::get('/admin/dashboard',[DahboardController::class,'AdminDashboard'])->name('admin.dashboard');
     Route::prefix('admin')->group(function(){
@@ -236,6 +243,16 @@ Route::prefix('siswa')->group(function(){
 
 
         
+
+    }); //End Group
+
+
+Route::prefix('lsp')->group(function(){
+        Route::get('/data',[LspController::class,'DataLsp'])->name('data.lsp');
+        Route::get('/data/hapus/{id}',[LspController::class,'HapusDataLsp'])->name('hapus.data.lsp');
+        Route::get('/data/edit/{id}',[LspController::class,'EditDataLsp'])->name('edit.data.lsp');
+        Route::get('/data/update/{id}',[LspController::class,'UpdateDataLsp'])->name('update.data.lsp');
+
 
     }); //End Group
 
