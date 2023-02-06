@@ -60,36 +60,36 @@
   </tr>
   
   <tr>
-    <td>2</td>
+    <td>1</td>
     <td><b>NIK</b></td>
     <td>{{ $allSiswa->nik }}</td>
   </tr>
   <tr>
-    <td>3</td>
+    <td>2</td>
     <td><b>Nama</b></td>
     <td>{{ $allSiswa->name }}</td>
   </tr>
   <tr>
-    <td>4</td>
+    <td>3</td>
     <td><b>Tempat Lahir</b></td>
     <td>{{ $allSiswa->tempat_lahir }}</td>
   </tr>
 
   <tr>
-    <td>5</td>
+    <td>4</td>
     <td><b>Tanggal Lahir</b></td>
     <!-- <td>@phpdate("d F Y", strtotime{{ $allSiswa->tanggal_lahir }}</td> -->
     <td>{{ date("d F Y", strtotime($allSiswa->tanggal_lahir)) }}</td>
   </tr>
 
   <tr>
-    <td>4</td>
+    <td>5</td>
     <td><b>Program Keahlian</b></td>
     <td>{{ $allSiswa->jurusan->nama }}</td>
   </tr>
 
   <tr>
-    <td>4</td>
+    <td>6</td>
     <td><b>Skema Kompetensi</b></td>
     <td>Klaster 1 - Penerapan Rangkaian Elektronika</td>
   </tr>
