@@ -2,7 +2,7 @@
 @section('admin')
 
 @section('title')
-   Agama
+   Data LSP
 @endsection
 
 <!--start page wrapper -->
@@ -10,13 +10,13 @@
 			<div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Agama</div>
+					<div class="breadcrumb-title pe-3"> LSP</div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item active" aria-current="page">Data Agama</li>
+								<li class="breadcrumb-item active" aria-current="page">Data LSP</li>
 							</ol>
 						</nav>
 					</div>
@@ -28,7 +28,7 @@
 				<!-- Awal Moodal -->
 				<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 											<div class="btn-group" role="group">
-												<button type="button" class="btn btn-primary mb-3 mb-lg-0" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bxs-plus-square'></i> Agama</button>
+												<button type="button" class="btn btn-primary mb-3 mb-lg-0" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bxs-plus-square'></i> Siswa</button>
 												
 											</div>
 										</div>
