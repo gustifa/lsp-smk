@@ -6,18 +6,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--favicon-->
-	<link rel="icon" href="{{asset('adminbackend/assets/images/favicon-32x32.png')}}" type="image/png" />
+	<link rel="icon" href="{{asset('backend/assets/images/favicon-32x32.png')}}" type="image/png" />
 	<!--plugins-->
-	<link href="{{asset('adminbackend/assets/plugins/simplebar/css/simplebar.css')}}" rel="stylesheet" />
-	<link href="{{asset('adminbackend/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" />
-	<link href="{{asset('adminbackend/assets/plugins/metismenu/css/metisMenu.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('backend/assets/plugins/simplebar/css/simplebar.css')}}" rel="stylesheet" />
+	<link href="{{asset('backend/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" />
+	<link href="{{asset('backend/assets/plugins/metismenu/css/metisMenu.min.css')}}" rel="stylesheet" />
 	<!-- loader-->
-	<link href="{{asset('adminbackend/assets/css/pace.min.css')}}" rel="stylesheet" />
-	<script src="{{asset('adminbackend/assets/js/pace.min.js')}}"></script>
+	<link href="{{asset('backend/assets/css/pace.min.css')}}" rel="stylesheet" />
+	<script src="{{asset('backend/assets/js/pace.min.js')}}"></script>
 	<!-- Bootstrap CSS -->
-	<link href="{{asset('adminbackend/assets/css/bootstrap.min.css')}}" rel="stylesheet">
-	<link href="{{asset('adminbackend/assets/css/app.css')}}" rel="stylesheet">
-	<link href="{{asset('adminbackend/assets/css/icons.css')}}" rel="stylesheet">
+	<link href="{{asset('backend/assets/css/bootstrap.min.css')}}" rel="stylesheet">
+	<link href="{{asset('backend/assets/css/app.css')}}" rel="stylesheet">
+	<link href="{{asset('backend/assets/css/icons.css')}}" rel="stylesheet">
 	<title>Admin Login</title>
 </head>
 
@@ -29,14 +29,14 @@
 				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
 					<div class="col mx-auto">
 						<div class="mb-4 text-center">
-							<!-- <img src="{{asset('adminbackend/assets/images/logo-img.png')}}" width="180" alt="" /> -->
+							<!-- <img src="{{asset('backend/assets/images/logo-img.png')}}" width="180" alt="" /> -->
 						</div>
 						<div class="card">
 							<div class="card-body">
 								<div class="border p-4 rounded">
 									<div class="text-center">
-										<h3 class="">Admin Sign in</h3>
-										<p>Don't have an account yet? <a href="{{route('register')}}">Sign up here</a>
+										<h3 class="">Form Login</h3>
+										<p>Daftar disini <a href="{{route('daftar')}}">Sign up here</a>
 										</p>
 									</div>
 									
@@ -81,12 +81,12 @@
 	</div>
 	<!--end wrapper-->
 	<!-- Bootstrap JS -->
-	<script src="{{asset('adminbackend/assets/js/bootstrap.bundle.min.js')}}"></script>
+	<script src="{{asset('backend/assets/js/bootstrap.bundle.min.js')}}"></script>
 	<!--plugins-->
-	<script src="{{asset('adminbackend/assets/js/jquery.min.js')}}"></script>
-	<script src="{{asset('adminbackend/assets/plugins/simplebar/js/simplebar.min.js')}}"></script>
-	<script src="{{asset('adminbackend/assets/plugins/metismenu/js/metisMenu.min.js')}}"></script>
-	<script src="{{asset('adminbackend/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js')}}"></script>
+	<script src="{{asset('backend/assets/js/jquery.min.js')}}"></script>
+	<script src="{{asset('backend/assets/plugins/simplebar/js/simplebar.min.js')}}"></script>
+	<script src="{{asset('backend/assets/plugins/metismenu/js/metisMenu.min.js')}}"></script>
+	<script src="{{asset('backend/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js')}}"></script>
 	<!--Password show & hide js -->
 	<script>
 		$(document).ready(function () {
@@ -105,7 +105,7 @@
 		});
 	</script>
 	<!--app JS-->
-	<script src="{{asset('adminbackend/assets/js/app.js')}}"></script>
+	<script src="{{asset('backend/assets/js/app.js')}}"></script>
 </body>
 
 </html>
