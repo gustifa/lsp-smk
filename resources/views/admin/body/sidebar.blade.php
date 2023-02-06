@@ -29,11 +29,18 @@
 						
 	
 					</ul>
+
+					<ul>
+						<li> <a href="{{route('lihat.jurusan')}}"><i class="bx bx-right-arrow-alt"></i>Materi UJi </a>
+						</li>
+						
+	
+					</ul>
 				<li>
 					<a href="{{route('data.lsp')}}">
 						<div class="parent-icon"><i class='bx bx-data'></i>
 						</div>
-						<div class="menu-title">Pendaftar LSP-P1</div>
+						<div class="menu-title">Data LSP-P1</div>
 					</a>
 				</li>
 
