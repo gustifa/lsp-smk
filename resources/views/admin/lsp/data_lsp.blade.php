@@ -96,6 +96,7 @@ extends('admin.admin_master')
 										<th>KK</th>
 										<th>Sertifikat</th>
 										<th>Rapor</th>
+										<th>Cetak</th>
 										<!-- <th>Alamat</th> -->
 										<th>Aksi</th>
 									</tr>
@@ -112,9 +113,10 @@ extends('admin.admin_master')
 										<td><a class="btn btn-warning" href=""><i class='bx bx-show mr-1'></i></a></td>
 										<td><a class="btn btn-success" href=""><i class='bx bx-show mr-1'></i></a></td>
 										<td><a class="btn btn-warning" href=""><i class='bx bx-show mr-1'></i></a></td>
+										<td><a class="btn btn-warning" href="{{route('cetak.pendaftaran.admin', $item->id)}}"><i class=''>aaaaa</i></a></td>
 										<!-- <td>{{$item->address}}</td> -->
 										<td style="width: 20px;">
-											<a class="btn btn-info" href="{{route('edit.data.lsp',$item->id)}}"><i class='bx bx-edit mr-1'></i></a>
+											<a class="btn btn-info" href=""><i class='bx bx-edit mr-1'></i></a>
 											<a class="btn btn-danger" href="{{route('hapus.data.lsp',$item->id)}}" id="delete"><i class='bx bx-x-circle mr-1'></i></a>
 
 										</td>

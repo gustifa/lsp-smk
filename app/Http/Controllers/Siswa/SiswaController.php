@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Jurusan;
+use App\Models\UnitKompetensi;
 use PDF;
 
 use Illuminate\Support\Facades\Hash;
@@ -93,7 +94,7 @@ class SiswaController extends Controller
             $data->save();
 
         $notification = array(
-            'message' => 'Pendaftaran Update Succesfully',
+            'message' => 'Data Pendaftaran Berhasil Diperbaiki',
             'alert-type' => 'success',
         );
         return redirect()->back()->with($notification);
@@ -228,6 +229,28 @@ class SiswaController extends Controller
     $pdf = PDF::loadView('siswa.pendaftaran_siswa', compact('allSiswa'));
     // //$pdf->SetProtection(['copy', 'print'], '', 'pass');
     return $pdf->stream('bukti_pendaftaran.pdf');
+
+    }
+
+    public function PendaftaranAdminPdf(Request $request){
+        $id = Auth::user()->id;
+        $allSiswa = User::find($id);
+        $dataUk = UnitKompetensi::all();
+        //$allSiswa = User::all();
+        // return view('siswa.pendaftaran_admin_siswa', compact('allSiswa'));
+    $pdf = PDF::loadView('siswa.pendaftaran_admin_siswa', compact('allSiswa', 'dataUk'));
+    $pdf->SetProtection(['copy', 'print'], '', 'pass');
+   return $pdf->stream('bukti_pendaftaran.pdf');
+
+    }
+
+    public function CetakPendaftaranAdmin($id){
+        $dataUk = User::where('role', 'siswa')->orderBy('id','DESC')->first()->id;
+        //$allSiswa = User::all();
+        // return view('siswa.pendaftaran_admin_siswa', compact('allSiswa'));
+    $pdf = PDF::loadView('siswa.pendaftaran_admin_siswa', compact('allSiswa', 'dataUk'));
+    $pdf->SetProtection(['copy', 'print'], '', 'pass');
+   return $pdf->stream('bukti_pendaftaran.pdf');
 
     }
 }

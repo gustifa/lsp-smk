@@ -10,6 +10,8 @@ class LspController extends Controller
 {
     public function LihatDataLsp(){
          // $adminData = User::all();
+    	 // $id = Auth::user()->id;
+      //    $dataSiswa = User::find($id);
          $dataLsp = User::where('role','siswa')->get();;
          // $dataLsp = User::all();
          

@@ -23,10 +23,10 @@
 				<div class="container">
 					<div class="main-body">
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-lg-12">
 								<div class="card">
 									<div class="card-body">
-										<h5 class="mb-3">a. Data Pribadi</h5>
+										<h5 class="mb-3">Informasi Pendaftaran</h5>
 									<form method="post" action="{{route('siswa.data.update')}}" enctype="multipart/form-data">
 										@csrf
 										<div class="row mb-3">
@@ -58,6 +58,29 @@
 											
 										</div>
 
+
+																			
+										<!-- <div class="row">
+											<div class="col-sm-4"></div>
+											<div class="col-sm-8 text-secondary">
+												<input type="submit" class="btn btn-primary px-4" value="Perbaiki Data">
+											</div>
+										
+										</div> -->
+									</div>
+								</div>
+
+							</div> <!-- Akhir -->
+
+
+														<div class="col-lg-6">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="mb-3">a. Data Pribadi</h5>
+									<form method="post" action="{{route('siswa.data.update')}}" enctype="multipart/form-data">
+										@csrf
+										
+
 											<div class="row mb-3">
 											<div class="col-sm-4">
 												<h6 class="mb-0">Tempat Lahir</h6>
@@ -84,12 +107,10 @@
 												<h6 class="mb-0">Jenis Kelamin</h6>
 											</div>
 											<div class="col-sm-8 text-secondary">
-												<select name="jenis_kelamin" class="form-select" id="inputSelectCountry" aria-label="Default select example">
+												<select required="" name="jenis_kelamin" class="form-select" id="inputSelectCountry" aria-label="Default select example">
 													<option value="" selected="" disabled="">Jenis Kelamin</option>
-													 
-													<option value="Laki-Laki">Laki-Laki</option>
-													<option value="Wanita">Wanita</option>
-
+<option value="Laki-Laki"{{ ($dataSiswa->jenis_kelamin == 'Laki-Laki')? 'selected':'' }}>Laki-Laki</option>
+<option value="Perempuan"{{ ($dataSiswa->jenis_kelamin == 'Perempuan')? 'selected':'' }}>Perempuan</option>
 												</select>
 											</div>
 										</div>
@@ -99,11 +120,10 @@
 												<h6 class="mb-0">Kebangsaan</h6>
 											</div>
 											<div class="col-sm-8 text-secondary">
-												<select name="kebangsaan" class="form-select" id="inputSelectCountry" aria-label="Default select example">
+												<select required="" name="kebangsaan" class="form-select" id="inputSelectCountry" aria-label="Default select example">
 													<option value="" selected="" disabled="">Kebangsaan</option>
-													 
-													<option value="WNI">WNI</option>
-													<option value="WNA">WNA</option>
+<option value="WNI"{{ ($dataSiswa->kebangsaan == 'WNI')? 'selected':'' }}>WNI</option>
+<option value="WNA"{{ ($dataSiswa->kebangsaan == 'WNA')? 'selected':'' }}>WNA</option>
 
 												</select>
 											</div>
@@ -124,7 +144,7 @@
 												<h6 class="mb-0">No. Telepon</h6>
 											</div>
 											<div class="col-sm-8 text-secondary">
-												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->phone}}" name="phone">
+												<input class="form-control form-control-sm mb-3" type="number" value="{{$dataSiswa->phone}}" name="phone">
 											</div>
 											
 										</div>
@@ -147,7 +167,7 @@
 												<select name="jurusan" required="" class="form-select" id="inputSelectCountry" aria-label="Default select example">
 													<option value="" selected="" disabled="">Program Keahlian</option>
 													 @foreach($dataJurusan as $item)
-													<option value="{{ $item->id }}">{{ $item->kode }}</option>
+<option value="{{ $item->id }}" {{ ($item->id == $item->id)? "selected":"" }}>{{ $item->kode }}</option>
 												 	@endforeach
 												</select>
 
@@ -160,7 +180,7 @@
 												<h6 class="mb-0">Kualifikasi Pendidikan </h6>
 											</div>
 											<div class="col-sm-8 text-secondary">
-												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->pendidikan}}" name="phone">
+												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->pendidikan}}" name="pendidikan">
 											</div>
 											
 										</div>										
@@ -174,7 +194,7 @@
 									</div>
 								</div>
 
-							</div>
+							</div> <!-- Akhir -->
 
 							<!-- b. Data PekerjaanSekarang ===Awal=== -->
 							<div class="col-lg-6">
@@ -217,7 +237,7 @@
 												<h6 class="mb-0">No. Telepon</h6>
 											</div>
 											<div class="col-sm-8 text-secondary">
-												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->phone_kantor}}" name="phone">
+												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->phone_kantor}}" name="phone_kantor">
 											</div>
 											
 										</div>
@@ -244,7 +264,15 @@
 											
 										</div>										
 										<div class="row">
-											<div class="col-sm-4"></div>
+											<div class="col-sm-12">
+												<h3 class="text-warning">Catatan Penting!!!</h3>
+												<h4 class="text-danger">Lengkapai Seluruh <b>Data Pribadi</b>. Untuk <b>Data Pekerjaan Sekarang</b> boleh diisi atau dikosongkan. </h4>
+											</div>
+							
+										</div>
+										<div class="row">
+											<div class="col-sm-4">
+											</div>
 											<div class="col-sm-8 text-secondary">
 												<input type="submit" class="btn btn-primary px-4" value="Perbaiki Data">
 											</div>

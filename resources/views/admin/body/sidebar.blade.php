@@ -36,6 +36,12 @@
 						
 	
 					</ul>
+					<ul>
+						<li> <a href="{{route('lihat.uk')}}"><i class="bx bx-right-arrow-alt"></i>Unit Kompetensi </a>
+						</li>
+						
+	
+					</ul>
 				<li>
 					<a href="{{route('data.lsp')}}">
 						<div class="parent-icon"><i class='bx bx-user-pin'></i>

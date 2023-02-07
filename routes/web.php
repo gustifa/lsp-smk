@@ -31,6 +31,7 @@ use App\Http\Controllers\Siswa\PendaftaranController;
 use App\Http\Controllers\Backend\LspController;
 
 use App\Http\Controllers\Backend\SettingController;
+use App\Http\Controllers\Backend\UnitKompetensiController;
 
 
 /*
@@ -179,6 +180,13 @@ require __DIR__.'/auth.php';
                 Route::get('/edit/{id}',[SettingController::class,'EditSetting'])->name('edit.setting');
                 Route::post('/update/{id}',[SettingController::class,'UpdateSetting'])->name('update.setting');
             });//akhir Group Setting
+
+            Route::prefix('uk')->group(function(){
+                Route::get('/lihat',[UnitKompetensiController::class,'LihatUk'])->name('lihat.uk');
+                Route::post('/simpan',[UnitKompetensiController::class,'SimpanUk'])->name('simpan.uk');
+                Route::get('/edit/{id}',[UnitKompetensiController::class,'EditUk'])->name('edit.uk');
+                Route::post('/update/{id}',[UnitKompetensiController::class,'UpdateUk'])->name('update.uk');
+            });//akhir Group Setting
         }); //End Group Admin
 
     }); 
@@ -206,6 +214,8 @@ require __DIR__.'/auth.php';
 
             //PDF
             Route::get('/pendaftaran/pdf', [SiswaController::class,'PendaftaranPdf'])->name('pendaftaran.pdf');
+            Route::get('/pendaftaran-a/pdf', [SiswaController::class,'PendaftaranAdminPdf'])->name('pendaftaran.admin.pdf');
+            Route::get('/pendaftaran-b/pdf/{id}', [SiswaController::class,'CetakPendaftaranAdmin'])->name('cetak.pendaftaran.admin');
         }); //End Group Siswa
 
     }); 

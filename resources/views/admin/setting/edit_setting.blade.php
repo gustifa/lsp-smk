@@ -38,7 +38,7 @@
 
 									<div class="mb-3">
 										<label class="form-label">Judul 1:</label>
-										<input type="text" name="judul1" value="{{$editSetting->judul2}}" class="form-control">
+										<input type="text" name="judul1" value="{{$editSetting->judul1}}" class="form-control">
 											@error('judul1')
 										 	<span class="text-danger">{{ $message }}</span>
 										 	@enderror
@@ -46,6 +46,7 @@
 
 									<div class="mb-3">
 										<label class="form-label">Judul 2:</label>
+										
 										<input type="text" name="judul2" value="{{$editSetting->judul2}}" class="form-control">
 											@error('judul2')
 										 	<span class="text-danger">{{ $message }}</span>
