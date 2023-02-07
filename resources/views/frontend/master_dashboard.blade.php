@@ -53,8 +53,8 @@
         <div class="carousel-item active" style="background-image: url({{asset('frontend/assets/img/slide/slide-4.jpg')}});">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
-              <h2 class="logo mr-auto">SELAMAT DATANG <span>LSP-P1</span></h2>
-              <p>Lembaga Sertifikasi P1 merupakan lembaga pendidikan, lembaga pelatihan (lemdiklat) yang melatih pesertanya untuk memenuhi kebutuhan industri dan juga diperuntukkan untuk Industri yang ingin mensertifikasi karyawan yang ada diperusahaan mereka.</p>
+              <h2 class="logo mr-auto">SELAMAT DATANG <span>{{$dataSetting->nama}}</span></h2>
+              <p>{{$dataSetting->judul1}}</p>
 
 
               <div class="text-center">

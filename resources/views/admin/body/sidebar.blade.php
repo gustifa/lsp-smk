@@ -38,10 +38,20 @@
 					</ul>
 				<li>
 					<a href="{{route('data.lsp')}}">
-						<div class="parent-icon"><i class='bx bx-data'></i>
+						<div class="parent-icon"><i class='bx bx-user-pin'></i>
 						</div>
 						<div class="menu-title">Data LSP-P1</div>
 					</a>
 				</li>
+
+				<li>
+					<a href="{{route('lihat.setting')}}">
+						<div class="parent-icon"><i class='bx bx-hive'></i>
+						</div>
+						<div class="menu-title">Setting </div>
+					</a>
+				</li>
+
+
 
 			</ul>

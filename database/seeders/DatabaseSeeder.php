@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TahunAjaranSeed::class);
         $this->call(GroupSeeder::class);
         $this->call(GuruSeeder::class);
+        $this->call(SettingSeeder::class);
         //$this->call(PresensiTableSeeder::class);
          //\App\Models\User::factory(10)->create();
          //\App\Models\Presensi::factory(10)->create();

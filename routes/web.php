@@ -30,6 +30,8 @@ use App\Http\Controllers\Siswa\PendaftaranController;
 
 use App\Http\Controllers\Backend\LspController;
 
+use App\Http\Controllers\Backend\SettingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -171,6 +173,12 @@ require __DIR__.'/auth.php';
                 Route::get('/data/edit/{id}',[LspController::class,'EditDataLsp'])->name('edit.data.lsp');
                 Route::get('/data/update/{id}',[LspController::class,'UpdateDataLsp'])->name('update.data.lsp');
             });
+
+            Route::prefix('setting')->group(function(){
+                Route::get('/lihat',[SettingController::class,'LihatSetting'])->name('lihat.setting');
+                Route::get('/edit/{id}',[SettingController::class,'EditSetting'])->name('edit.setting');
+                Route::post('/update/{id}',[SettingController::class,'UpdateSetting'])->name('update.setting');
+            });//akhir Group Setting
         }); //End Group Admin
 
     }); 
