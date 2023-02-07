@@ -98,55 +98,55 @@
   
 </table>
 
-<p align="left">Bagian 1 :  Rincian Data PemohonSertifikasi</p>
+<p align="left"><b>Bagian 1 :  Rincian Data PemohonSertifikasi</b></p>
 <p align="left">Pada bagian ini,  cantumkan data pribadi, data pendidikan formal serta data pekerjaan anda pada saat ini.</p>
 <p align="left">a. Data Pribadi</p>
 
 <table id="customers">
   <tr>
     <td width="20%">Nama lengkap</td>
-    <td width="2%">:</td>
+    <td width="2%" align="center">:</td>
     <td width="78%">{{$allSiswa->name}}</td>
 
   </tr>
     <tr>
     <td>No. KTP/NIK/Paspor</td>
-    <td>:</td>
+    <td >:</td>
     <td>{{$allSiswa->nik}}</td>
 
   </tr>
   <tr>
     <td>Tempat / tgl. Lahir</td>
-    <td>:</td>
+    <td align="center">:</td>
     <td>{{$allSiswa->tanggal_lahir}}</td>
   </tr>
 
   <tr>
     <td>Kebangsaan</td>
-    <td>:</td>
+    <td align="center">:</td>
     <td>{{$allSiswa->kebangsaan}}</td>
 
   </tr>
     <tr>
     <td>Alamatrumah</td>
-    <td>:</td>
+    <td align="center">:</td>
     <td>{{$allSiswa->address}}</td>
 
   </tr>
   <tr>
     <td>No. Telepon</td>
-    <td>:</td>
+    <td align="center">:</td>
     <td>{{$allSiswa->phone}}</td>
   </tr>
   <tr>
     <td>Email</td>
-    <td>:</td>
+    <td align="center">:</td>
     <td>{{$allSiswa->email}}</td>
   </tr>
 
   <tr>
     <td>Kualifikasi Pendidikan </td>
-    <td>:</td>
+    <td align="center">:</td>
     <td>{{$allSiswa->pendidikan}}</td>
   </tr>
 </table>
@@ -157,7 +157,7 @@
 <table id="customers">
   <tr>
     <td width="20%">Nama Institusi/ Perusahaan </td>
-    <td width="2%">:</td>
+    <td width="2%" align="center">:</td>
     <td width="78%">{{$allSiswa->pekerjaan}}</td>
 
   </tr>
@@ -195,7 +195,7 @@
 <br>
 <br>
 
-<p align="left">Bagian  2 :  Data Sertifikasi</p>
+<p align="left"><b>Bagian  2 :  Data Sertifikasi</b></p>
 <p align="">TuliskanJudul dan Nomor Skema Sertifikasi, Tujuan Asesmen  serta Daftar Unit Kompetensi sesuai kemasan pada skema sertifikasi yang anda ajukan untuk mendapatkan pengakuan sesuai dengan latar belakang pendidikan, pelatihan serta pengalaman kerja yang andamiliki</p>
 
 <table id="customers">
@@ -228,10 +228,10 @@
 
 <table id="customers">
   <tr>
-    <td width="10%">No </td>
-    <td width="30%">Kode Unit</td>
-    <td width="45%">Judul Unit</td>
-    <td width="15%">Jenis Standar</td>
+    <th width="10%">No </th>
+    <th width="30%">Kode Unit</th>
+    <th width="45%">Judul Unit</th>
+    <th width="15%">Jenis Standar</th>
 
   </tr>
   @foreach($dataUk as $key => $item)
@@ -243,7 +243,7 @@
   </tr>
     @endforeach
 </table>
-<p>Bagian  3  :  Bukti KelengkapanPemohon</p>
+<p><b>Bagian  3  :  Bukti Kelengkapan Pemohon</b></p>
 <p>Bukti Persyaratan Dasar Pemohon</p>
 
 
