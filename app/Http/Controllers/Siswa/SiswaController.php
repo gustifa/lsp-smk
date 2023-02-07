@@ -77,8 +77,19 @@ class SiswaController extends Controller
         $data = User::find($id);
             $data->tempat_lahir = $request->tempat_lahir;
             $data->tanggal_lahir = $request->tanggal_lahir;
+            $data->email = $request->email;
+            $data->jenis_kelamin = $request->jenis_kelamin;
+            $data->kebangsaan = $request->kebangsaan;
             $data->address = $request->address;
+            $data->phone = $request->phone;
             $data->jurusan_id = $request->jurusan;
+            $data->pendidikan = $request->pendidikan;
+            $data->pekerjaan = $request->pekerjaan;
+            $data->jabatan = $request->jabatan;
+            $data->alamat_kantor = $request->alamat_kantor;
+            $data->kode_pos_kantor = $request->kode_pos_kantor;
+            $data->phone_kantor = $request->phone_kantor;
+            $data->email_kantor = $request->email_kantor;
             $data->save();
 
         $notification = array(

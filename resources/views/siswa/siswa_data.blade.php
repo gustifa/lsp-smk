@@ -5,13 +5,14 @@
 			<div class="page-content"> 
 								<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Form Pendaftaran</div>
+					<div class="breadcrumb-title pe-3">FORMULIR.APL.01.</div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item active" aria-current="page">Rekap Data Pendaftaran</li>
+								<li class="breadcrumb-item active" aria-current="page">PERMOHONAN SERTIFIKASI KOMPETENSI
+</li>
 							</ol>
 						</nav>
 					</div>
@@ -25,6 +26,7 @@
 							<div class="col-lg-6">
 								<div class="card">
 									<div class="card-body">
+										<h5 class="mb-3">a. Data Pribadi</h5>
 									<form method="post" action="{{route('siswa.data.update')}}" enctype="multipart/form-data">
 										@csrf
 										<div class="row mb-3">
@@ -48,14 +50,15 @@
 
 										<div class="row mb-3">
 											<div class="col-sm-4">
-												<h6 class="mb-0">NIK</h6>
+												<h6 class="mb-0">No. KTP/NIK/Paspor</h6>
 											</div>
 											<div class="col-sm-8 text-secondary">
 												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->nik}}" name="nik" disabled="">
 											</div>
 											
 										</div>
-										<div class="row mb-3">
+
+											<div class="row mb-3">
 											<div class="col-sm-4">
 												<h6 class="mb-0">Tempat Lahir</h6>
 											</div>
@@ -64,6 +67,7 @@
 											</div>
 											
 										</div>
+										
 										<div class="row mb-3">
 											<div class="col-sm-4">
 												<h6 class="mb-0">Tanggal Lahir</h6>
@@ -73,6 +77,38 @@
 											</div>
 											
 										</div>
+										
+										
+										<div class="row mb-3">
+											<div class="col-sm-4">
+												<h6 class="mb-0">Jenis Kelamin</h6>
+											</div>
+											<div class="col-sm-8 text-secondary">
+												<select name="jenis_kelamin" class="form-select" id="inputSelectCountry" aria-label="Default select example">
+													<option value="" selected="" disabled="">Jenis Kelamin</option>
+													 
+													<option value="Laki-Laki">Laki-Laki</option>
+													<option value="Wanita">Wanita</option>
+
+												</select>
+											</div>
+										</div>
+
+										<div class="row mb-3">
+											<div class="col-sm-4">
+												<h6 class="mb-0">Kebangsaan</h6>
+											</div>
+											<div class="col-sm-8 text-secondary">
+												<select name="kebangsaan" class="form-select" id="inputSelectCountry" aria-label="Default select example">
+													<option value="" selected="" disabled="">Kebangsaan</option>
+													 
+													<option value="WNI">WNI</option>
+													<option value="WNA">WNA</option>
+
+												</select>
+											</div>
+										</div>
+
 										<div class="row mb-3">
 											<div class="col-sm-4">
 												<h6 class="mb-0">Alamat</h6>
@@ -82,15 +118,26 @@
 											</div>
 											
 										</div>
-										<!-- <div class="row mb-3">
+
+										<div class="row mb-3">
 											<div class="col-sm-4">
-												<h6 class="mb-0">HP</h6>
+												<h6 class="mb-0">No. Telepon</h6>
 											</div>
 											<div class="col-sm-8 text-secondary">
 												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->phone}}" name="phone">
 											</div>
 											
-										</div> -->
+										</div>
+										<div class="row mb-3">
+											<div class="col-sm-4">
+												<h6 class="mb-0">Email</h6>
+											</div>
+											<div class="col-sm-8 text-secondary">
+												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->email}}" name="email">
+											</div>
+											
+										</div>
+
 
 										<div class="row mb-3">
 											<div class="col-sm-4">
@@ -108,29 +155,94 @@
 											</div>
 										</div>
 
-										
-										<!-- <div class="row mb-3">
+										<div class="row mb-3">
 											<div class="col-sm-4">
-												<h6 class="mb-0">Materi Ujian</h6>
+												<h6 class="mb-0">Kualifikasi Pendidikan </h6>
 											</div>
 											<div class="col-sm-8 text-secondary">
-												<select name="materi_uji" class="form-select" id="inputSelectCountry" aria-label="Default select example">
-													<option value="" selected="" disabled="">Cluster Ujian</option>
-													 @foreach($dataJurusan as $item)
-													<option value="{{ $item->id }}">{{ $item->kode }}</option>
-												 	@endforeach
-												</select>
+												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->pendidikan}}" name="phone">
 											</div>
+											
+										</div>										
+										<!-- <div class="row">
+											<div class="col-sm-4"></div>
+											<div class="col-sm-8 text-secondary">
+												<input type="submit" class="btn btn-primary px-4" value="Perbaiki Data">
+											</div>
+										
 										</div> -->
+									</div>
+								</div>
 
+							</div>
+
+							<!-- b. Data PekerjaanSekarang ===Awal=== -->
+							<div class="col-lg-6">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="mb-3">b. Data Pekerjaan Sekarang</h5>
+										<div class="row mb-3">
+											<div class="col-sm-4">
+												<h6 class="mb-0">Nama Institusi/ Perusahaan </h6>
+											</div>
+											<div class="col-sm-8 text-secondary">
+												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->pekerjaan}}" name="pekerjaan">
+											</div>
+											
+										</div>
+										<div class="row mb-3">
+											<div class="col-sm-4">
+												<h6 class="mb-0">Jabatan</h6>
+											</div>
+											<div class="col-sm-8 text-secondary">
+												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->jabatan}}" name="jabatan">
+											</div>
+											
+										</div>
 										
 
-										
+
+										<div class="row mb-3">
+											<div class="col-sm-4">
+												<h6 class="mb-0">Alamat Kantor</h6>
+											</div>
+											<div class="col-sm-8 text-secondary">
+												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->alamat_kantor}}" name="alamat_kantor">
+											</div>
+											
+										</div>
+
+										<div class="row mb-3">
+											<div class="col-sm-4">
+												<h6 class="mb-0">No. Telepon</h6>
+											</div>
+											<div class="col-sm-8 text-secondary">
+												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->phone_kantor}}" name="phone">
+											</div>
+											
+										</div>
+
+										<div class="row mb-3">
+											<div class="col-sm-4">
+												<h6 class="mb-0">Email Kantor</h6>
+											</div>
+											<div class="col-sm-8 text-secondary">
+												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->email_kantor}}" name="email_kantor">
+											</div>
+											
+										</div>
 
 
 
-										
-										
+										<div class="row mb-3">
+											<div class="col-sm-4">
+												<h6 class="mb-0">Kode Pos</h6>
+											</div>
+											<div class="col-sm-8 text-secondary">
+												<input class="form-control form-control-sm mb-3" type="text" value="{{$dataSiswa->kode_pos_kantor}}" name="kode_pos_kantor">
+											</div>
+											
+										</div>										
 										<div class="row">
 											<div class="col-sm-4"></div>
 											<div class="col-sm-8 text-secondary">
@@ -143,7 +255,7 @@
 
 							</div>
 
-							<div class="col-lg-6">
+							<!-- <div class="col-lg-6">
 								<div class="card">
 									<div class="card-body">
 									<form method="post" action="{{route('siswa.profile.store')}}" enctype="multipart/form-data">
@@ -212,7 +324,7 @@
 									</div>
 								</div>
 
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
