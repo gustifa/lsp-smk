@@ -53,8 +53,9 @@
         <div class="carousel-item active" style="background-image: url({{asset('frontend/assets/img/slide/slide-4.jpg')}});">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
-              <h2 class="logo mr-auto">SELAMAT DATANG <span>{{$dataSetting->nama}}</span></h2>
-              <p>{{$dataSetting->judul1}}</p>
+              <h2 class="logo mr-auto" align="center">SELAMAT DATANG</h2>
+                   <h1 class="logo mr-auto" align="center"><span>{{$dataSetting->nama}}</span></h1>
+              <p align="center">{{$dataSetting->judul1}}</p>
 
 
               <div class="text-center">
