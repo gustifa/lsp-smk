@@ -32,7 +32,7 @@
 <table id="customers">
   <tr>
     <td><h2>
-  <?php $image_path = '/upload/sekolah_images/logo.png'; ?>
+  <?php $image_path = '/upload/sekolah_images/logo_lsp.jpg'; ?>
   <img src="{{ public_path() . $image_path }}" width="100" height="100">
 
     </h2></td>
