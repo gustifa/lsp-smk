@@ -19,8 +19,8 @@ class SettingSeeder extends Seeder
         DB::table('setting')->insert([
             //admin
             [
-                'nama' => 'Nama Aplikasi',
-                'judul1' => 'Judul1',
+                'nama' => 'LSP-P1 SMK NEGERI 1 KINALI',
+                'judul1' => 'Lembaga Sertifikasi P1 merupakan lembaga pendidikan, lembaga pelatihan (lemdiklat) yang melatih pesertanya untuk memenuhi kebutuhan industri dan juga diperuntukkan untuk Industri yang ingin mensertifikasi karyawan yang ada diperusahaan mereka',
                 'judul2' => 'Judul2',
                 'alamat' => 'Alamat',
                 'created_at' => Carbon::now(),
