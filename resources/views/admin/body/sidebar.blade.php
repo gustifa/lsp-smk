@@ -24,7 +24,7 @@
 					</ul>
 
 					<ul>
-						<li> <a href="{{route('lihat.jurusan')}}"><i class="bx bx-right-arrow-alt"></i>Asesor </a>
+						<li> <a href="{{route('lihat.asesor')}}"><i class="bx bx-right-arrow-alt"></i>Asesor </a>
 						</li>
 						
 	

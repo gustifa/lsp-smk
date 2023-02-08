@@ -32,6 +32,7 @@ use App\Http\Controllers\Backend\LspController;
 
 use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\UnitKompetensiController;
+use App\Http\Controllers\Backend\AsesorController;
 
 
 /*
@@ -179,6 +180,14 @@ require __DIR__.'/auth.php';
                 Route::get('/lihat',[SettingController::class,'LihatSetting'])->name('lihat.setting');
                 Route::get('/edit/{id}',[SettingController::class,'EditSetting'])->name('edit.setting');
                 Route::post('/update/{id}',[SettingController::class,'UpdateSetting'])->name('update.setting');
+            });//akhir Group Setting
+
+            /*Asesor*/
+            Route::prefix('asesor')->group(function(){
+                Route::get('/lihat',[AsesorController::class,'LihatAsesor'])->name('lihat.asesor');
+                Route::post('/simpan',[AsesorController::class,'SimpanAsesor'])->name('simpan.asesor');
+                Route::get('/edit/{id}',[AsesorController::class,'EditAsesor'])->name('edit.asesor');
+                Route::post('/update/{id}',[AsesorController::class,'UpdateAsesor'])->name('update.asesor');
             });//akhir Group Setting
 
             Route::prefix('uk')->group(function(){
