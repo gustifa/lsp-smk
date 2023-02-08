@@ -21,22 +21,22 @@
 						</li>
 						
 	
-					</ul>
+					
 
-					<ul>
+					
 						<li> <a href="{{route('lihat.asesor')}}"><i class="bx bx-right-arrow-alt"></i>Asesor </a>
 						</li>
 						
 	
-					</ul>
+					
 
-					<ul>
+					
 						<li> <a href="{{route('lihat.jurusan')}}"><i class="bx bx-right-arrow-alt"></i>Materi UJi </a>
 						</li>
 						
 	
-					</ul>
-					<ul>
+				
+					
 						<li> <a href="{{route('lihat.uk')}}"><i class="bx bx-right-arrow-alt"></i>Unit Kompetensi </a>
 						</li>
 						

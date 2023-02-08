@@ -52,6 +52,13 @@
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
 									</div>
+									<div class="mb-3">
+										<label class="form-label">Email:</label>
+										<input type="text" name="email" class="form-control" placeholder="Inputkan Nama Asesor">
+										@error('email')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+									</div>
 
 									<div class="mb-3">
 										<label class="form-label">Username:</label>
@@ -96,8 +103,8 @@
 									<tr>
 										<th style="width: 8px;">No</th>
 										<th>Name Asesor</th>
-										<th>Kode</th>
-										<th>id</th>
+										<th>Email</th>
+										<th>Penguji</th>
 										<th>Aksi</th>
 									</tr>
 								</thead>
@@ -105,12 +112,12 @@
 									@foreach($dataAsesor as $key => $item)
 									<tr>
 										<td>{{$key+1}}</td>
-										<td>{{$item->nama_asesor}}</td>
-										<td>{{$item->id_user}}</td>
-										<td>{{$item->id_jurusan}}</td>
+										<td>{{$item->name}}</td>
+										<td>{{$item->email}}</td>
+										<td>{{$item['jurusan']['nama']}}</td>
 										<td style="width: 20px;">
 											<a class="btn btn-info" href="{{ route('edit.asesor',$item->id) }}"><i class='bx bx-edit mr-1'></i></a>
-											<a class="btn btn-danger" href="{{ route('hapus.asesor',$item->id) }}" id="delete"><i class='bx bx-x-circle mr-1'></i></a>
+											<a class="btn btn-danger" href="" id="delete"><i class='bx bx-x-circle mr-1'></i></a>
 										</td>
 									</tr>
 									@endforeach
