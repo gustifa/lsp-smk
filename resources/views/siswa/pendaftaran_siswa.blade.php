@@ -164,7 +164,12 @@
   <tr>
     <td></td>
     <td></td>
-    <td>Defitri Heriandi, S.Pd </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Rahmad Khalidi, S.Pd </td>
   </tr>
 
     

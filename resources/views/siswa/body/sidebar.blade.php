@@ -17,7 +17,13 @@
 					</a>
 					<ul>
 						
-						<li> <a href="{{route('siswa.data')}}"><i class="bx bx-right-arrow-alt"></i>Rekap</a>
+						<li> <a href="{{route('siswa.data')}}"><i class="bx bx-right-arrow-alt"></i>Form APL.01</a>
+						</li>
+						
+					</ul>
+					<ul>
+						
+						<li> <a href="{{route('siswa.data.asesmen')}}"><i class="bx bx-right-arrow-alt"></i>Form APL.02</a>
 						</li>
 						
 					</ul>

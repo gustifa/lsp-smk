@@ -203,6 +203,8 @@ require __DIR__.'/auth.php';
             Route::post('/profile/store', [SiswaController::class,'SiswaProfileStore'])->name('siswa.profile.store');
             Route::get('/logout', [SiswaController::class,'SiswaDestroy'])->name('siswa.logout');
             Route::get('/data',[SiswaController::class,'SiswaData'])->name('siswa.data');
+            /*Formulis APL.02*/
+            Route::get('/data/asesmen',[SiswaController::class,'SiswaDataAsesmen'])->name('siswa.data.asesmen');
             Route::post('/data/update', [SiswaController::class,'UpdateDataIsian'])->name('siswa.data.update');
             //Route::post('/data/update', [SiswaController::class,'UpdateData'])->name('siswa.data.update');
             Route::get('/upload/ktp', [SiswaController::class,'KtpSiswa'])->name('ktp.siswa');

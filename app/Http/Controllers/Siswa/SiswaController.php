@@ -65,6 +65,7 @@ class SiswaController extends Controller
 
         
     }
+     /*Formulis APL.02*/
     public function siswaData(){
         $id = Auth::user()->id;
         $dataSiswa = User::find($id);
@@ -251,6 +252,15 @@ class SiswaController extends Controller
     $pdf = PDF::loadView('siswa.pendaftaran_admin_siswa', compact('allSiswa', 'dataUk'));
     $pdf->SetProtection(['copy', 'print'], '', 'pass');
    return $pdf->stream('bukti_pendaftaran.pdf');
+
+    }
+
+    /*Formulis APL.02*/
+    public function siswaDataAsesmen(){
+        $id = Auth::user()->id;
+        $dataSiswa = User::find($id);
+        $dataJurusan = Jurusan::all();
+        return view('siswa.siswa_data_asesmen', compact('dataSiswa', 'dataJurusan'));
 
     }
 }

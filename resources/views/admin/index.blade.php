@@ -10,7 +10,7 @@
 								<div class="d-flex align-items-center">
 									<h5 class="mb-0 text-white">
 
-										0
+										{{$dataSiswa->count()}}
 
 									</h5>
 									<div class="ms-auto">
@@ -22,7 +22,7 @@
 								</div>
 								<a href="">
 								<div class="d-flex align-items-center text-white">
-									<p class="mb-0">Total Siswa </p>
+									<p class="mb-0">Jumlah Asesi </p>
 
 								</div>
 								</a>
@@ -35,7 +35,7 @@
 								<div class="d-flex align-items-center">
 									<h5 class="mb-0 text-white">
 
-										0
+										{{$dataAsesor->count()}}
 										
 
 
@@ -49,7 +49,7 @@
 								</div>
 								<a href="{{route('lihat.user')}}">
 								<div class="d-flex align-items-center text-white">
-									<p class="mb-0">Total Asesor</p>
+									<p class="mb-0">Jumlah Asesor</p>
 								</div>
 								</a>
 							</div>
@@ -60,7 +60,7 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<h5 class="mb-0 text-white">
-										0
+										{{$dataJurusan->count()}}
 
 										
 
@@ -73,7 +73,7 @@
 									<div class="progress-bar bg-white" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 								<div class="d-flex align-items-center text-white">
-									<p class="mb-0">Total Siswa</p>
+									<p class="mb-0">Jumlah Jurusan</p>
 									
 								</div>
 							</div>
@@ -85,7 +85,7 @@
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<h5 class="mb-0 text-white">
-										0
+										{{$dataAdmin->count()}}
 
 										
 
@@ -98,7 +98,7 @@
 									<div class="progress-bar bg-white" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 								<div class="d-flex align-items-center text-white">
-									<p class="mb-0">Total Admin</p>
+									<p class="mb-0">Jumlah Admin</p>
 									
 								</div>
 							</div>

@@ -36,22 +36,42 @@
 										 	@enderror
 									</div>
 
-									<div class="mb-3">
+							<div class="mb-3">
+								<label for="inputProductDescription" class="form-label">Judul 1:</label>
+								<textarea name="judul1" class="form-control" id="inputProductDescription" rows="3">
+									{{$editSetting->judul1}}
+								</textarea>
+										@error('judul1')
+										 	<span class="text-danger">{{ $message }}</span>
+										 	@enderror
+							</div>
+
+									<!-- div class="mb-3">
 										<label class="form-label">Judul 1:</label>
-										<input type="text" name="judul1" value="{{$editSetting->judul1}}" class="form-control">
+										<input  type="text" name="judul1" value="{{$editSetting->judul1}}" class="form-control">
 											@error('judul1')
 										 	<span class="text-danger">{{ $message }}</span>
 										 	@enderror
-									</div>
+									</div> -->
 
 									<div class="mb-3">
+								<label for="inputProductDescription" class="form-label">Judul 2:</label>
+								<textarea name="judul2" class="form-control" id="inputProductDescription" rows="3">
+									{{$editSetting->judul2}}
+								</textarea>
+										@error('judul2')
+										 	<span class="text-danger">{{ $message }}</span>
+										 	@enderror
+							</div>
+
+									<!-- <div class="mb-3">
 										<label class="form-label">Judul 2:</label>
 										
 										<input type="text" name="judul2" value="{{$editSetting->judul2}}" class="form-control">
 											@error('judul2')
 										 	<span class="text-danger">{{ $message }}</span>
 										 	@enderror
-									</div>
+									</div> -->
 
 									<div class="mb-3">
 										<label class="form-label">Alamat:</label>
