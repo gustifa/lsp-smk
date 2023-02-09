@@ -126,7 +126,7 @@ class SiswaController extends Controller
             $data->save();
 
         $notification = array(
-            'message' => 'Data Pendaftaran Berhasil Diperbaiki',
+            'message' => 'Data  Berhasil disimpan',
             'alert-type' => 'success',
         );
         return redirect()->back()->with($notification);
