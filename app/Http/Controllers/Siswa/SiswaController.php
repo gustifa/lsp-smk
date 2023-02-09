@@ -57,6 +57,29 @@ class SiswaController extends Controller
         
     }
 
+    public function SiswaPasswordEdit(){
+        return view('siswa.ganti_password_siswa');
+
+    }
+
+    public function SiswaUpdatePassword(Request $request){
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required|confirmed',
+        ]);
+
+        if (!Hash::check($request->old_password, auth::user()->password)) {
+            return back()->with("error", "Old Password Doesn't Mach!!!");
+        }
+        User::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->new_password)
+
+        ]);
+
+        return redirect()->route('siswa.login')->with("status", "Password Berhasil diperbaharui");
+
+    } //End Method
+
     public function SiswaLogin(){
         return view('siswa.siswa_login');
     }

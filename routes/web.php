@@ -210,6 +210,8 @@ require __DIR__.'/auth.php';
                        
             Route::get('/profile', [SiswaController::class,'Profile'])->name('siswa.profile');
             Route::post('/profile/store', [SiswaController::class,'SiswaProfileStore'])->name('siswa.profile.store');
+            Route::get('/edit/password', [SiswaController::class,'SiswaPasswordEdit'])->name('siswa.password.edit');
+            Route::post('/update/password', [SiswaController::class,'SiswaUpdatePassword'])->name('siswa.update.password');
             Route::get('/logout', [SiswaController::class,'SiswaDestroy'])->name('siswa.logout');
             Route::get('/data',[SiswaController::class,'SiswaData'])->name('siswa.data');
             /*Formulis APL.02*/
