@@ -107,10 +107,10 @@
 
 					</div><!--end row-->
 
-					<div class="row">
+		<div class="row"> <!--Awal row-->
 				<div class="col-lg-6 col-xs-12">
 					<div class="box-header with-border">
-						<h3 class="box-title"><strong>Identitas Sekolah</strong></h3>
+						<h5 class="box-title"><strong>Identitas Sekolah</strong></h5>
 					</div>
 										<table class="table table-condensed">
 						<tbody><tr>
@@ -161,7 +161,7 @@
 			</div>
 			<div class="col-lg-6 col-xs-12">
 				<div class="box-header with-border">
-					<h3 class="box-title"><strong>Informasi Aplikasi</strong></h3>
+					<h5 class="box-title"><strong>Informasi Aplikasi</strong></h5>
 				</div>
 						<table class="table table-condensed">
 					<tbody><tr>
@@ -199,7 +199,7 @@
 					</tr>
 				</tbody></table>
 			</div>
-		</div>
+		</div> <!--Akhir row-->
 
 
 				

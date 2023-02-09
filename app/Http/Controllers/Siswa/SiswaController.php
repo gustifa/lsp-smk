@@ -20,6 +20,43 @@ class SiswaController extends Controller
     	return view('siswa.index', compact('dataSiswa'));
     }
 
+    public function Profile(){
+        $id = Auth::user()->id;
+        $profileSiswa = User::find($id);
+        return view('siswa.profile', compact('profileSiswa'));
+    }
+
+    public function SiswaProfileStore(Request $request){
+        $id = Auth::user()->id;
+        $data = User::find($id);
+        // $data->name = $request->name;
+        $data->username = $request->username;
+        $data->email = $request->email;
+        $data->phone = $request->phone;
+        // $data->address = $request->address;
+        
+
+        if ($request->file('photo')) {
+            $file = $request->file('photo');
+            @unlink(public_path('upload/siswa_images/'.$data->photo));
+            $filename = date('YmdHi').$file->getClientOriginalName();
+            $file->move(public_path('upload/siswa_images'),$filename);
+            $data['photo'] = $filename;
+        }
+
+        $notification = array(
+            'message' => 'Profile Siswa Berhasil Diperbaharui',
+            'alert-type' => 'success',
+        );
+
+        $data->save();
+        return redirect()->back()->with($notification);
+
+
+
+        
+    }
+
     public function SiswaLogin(){
         return view('siswa.siswa_login');
     }
@@ -35,36 +72,7 @@ class SiswaController extends Controller
         return redirect('/');
     }
 
-    public function SiswaProfileStore(Request $request){
-        $id = Auth::user()->id;
-        $data = User::find($id);
-        $data->name = $request->name;
-        $data->username = $request->username;
-        $data->email = $request->email;
-        $data->phone = $request->phone;
-        $data->address = $request->address;
-        
-
-        if ($request->file('photo')) {
-            $file = $request->file('photo');
-            @unlink(public_path('upload/siswa_images/'.$data->photo));
-            $filename = date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('upload/siswa_images'),$filename);
-            $data['photo'] = $filename;
-        }
-
-        $notification = array(
-            'message' => 'SiswaProfile Update Succesfully',
-            'alert-type' => 'success',
-        );
-
-        $data->save();
-        return redirect()->back()->with($notification);
-
-
-
-        
-    }
+    
      /*Formulis APL.02*/
     public function siswaData(){
         $id = Auth::user()->id;

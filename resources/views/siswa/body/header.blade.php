@@ -338,14 +338,14 @@
 							</div>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end">
-							<li><a class="dropdown-item" href="{{route('admin.profile')}}"><i class="bx bx-user"></i><span>Profile</span></a>
+							<li><a class="dropdown-item" href="{{route('siswa.profile')}}"><i class="bx bx-user"></i><span>Profile</span></a>
 							</li>
 							<li><a class="dropdown-item" href="{{route('admin.change.password')}}"><i class="bx bx-cog"></i><span>Change Password</span></a>
 							</li>
-							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-home-circle'></i><span>Dashboard</span></a>
+							<li><a class="dropdown-item" href="{{route('siswa.dashboard')}}"><i class='bx bx-home-circle'></i><span>Dashboard</span></a>
 							</li>
-							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-dollar-circle'></i><span>Earnings</span></a>
-							</li>
+							<!-- <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-dollar-circle'></i><span>Earnings</span></a>
+							</li> -->
 							<li><a class="dropdown-item" href="javascript:;"><i class='bx bx-download'></i><span>Downloads</span></a>
 							</li>
 							<li>
