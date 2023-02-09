@@ -34,7 +34,7 @@
           <li>
            
               
-                <a href="{{route('admin.login')}}"><div class="btn btn-dark fadeIn animated bx bx-user"> Login</div></a>
+                <a href="{{route('admin.login')}}"><div class="fadeIn animated"> Login Admin</div></a>
       
           
           </li>
