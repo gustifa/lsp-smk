@@ -27,8 +27,7 @@
 										<div class="box-header with-border">
           				<h4 class="box-title">Selamat Datang <b>{{$dataSiswa->name}}</b>
 </h4>
-<!-- <h5 class="box-title">Jurusan <b>{{$dataSiswa->jurusan->nama}}</b>
-</h5> -->
+
 					</div>
 										<div class="box-body">
                 						<hr />
