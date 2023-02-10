@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Jurusan;
 use App\Models\UnitKompetensi;
+use App\Models\Sekolah;
 use PDF;
 
 use Illuminate\Support\Facades\Hash;

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Jurusan;
+use App\Models\Sekolah;
 
 
 //use App\Models\User;
@@ -19,7 +20,8 @@ class AdminController extends Controller
          $dataSiswa = User::where('role','siswa')->get();
          $dataAsesor = User::where('role','asesor')->get();
          $dataJurusan = Jurusan::all();
-        return view('admin.index',compact('dataAdmin', 'dataSiswa','dataAsesor','dataJurusan'));
+         $dataSekolah = Sekolah::all();
+        return view('admin.index',compact('dataAdmin', 'dataSiswa','dataAsesor','dataJurusan','dataSekolah'));
     }
 
     public function AdminDestroy(Request $request)
