@@ -17,11 +17,12 @@
 					</a>
 
 					<ul>
-						<li> <a href="{{route('lihat.jurusan')}}"><i class="bx bx-right-arrow-alt"></i>Jurusan</a>
+						<li> <a href="{{route('sekolah')}}"><i class="bx bx-right-arrow-alt"></i>Sekolah</a>
 						</li>
 						
 	
-					
+						<li> <a href="{{route('lihat.jurusan')}}"><i class="bx bx-right-arrow-alt"></i>Jurusan</a>
+						</li>
 
 					
 						<li> <a href="{{route('lihat.asesor')}}"><i class="bx bx-right-arrow-alt"></i>Asesor </a>
