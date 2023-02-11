@@ -188,7 +188,7 @@
 					</tr>
 					<tr>
 						<td>Group Diskusi</td>
-						<td>: <a href="https://www.facebook.com/groups/2003597939918600/" target="_blank" class="btn btn-sm btn-social btn-facebook"><i class="fa fa-facebook"></i>FB Group</a> <a href="http://t.me/eRaporSMK" target="_blank" class="btn btn-sm btn-social btn-info"><i class="fa fa-paper-plane"></i>Telegram</a></td>
+						<td>: <a href="" target="_blank" class="btn btn-sm btn-social btn-facebook"><i class="fa fa-facebook"></i>FB Group</a> <a href="" target="_blank" class="btn btn-sm btn-social btn-info"><i class="fa fa-paper-plane"></i>Telegram</a></td>
 					</tr>
 					<tr>
 						<td>Tim Helpdesk</td>
