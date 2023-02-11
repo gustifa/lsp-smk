@@ -19,7 +19,7 @@ class PendaftaranController extends Controller
         $validatedData = $request->validate([
                 'name' => 'required|unique:users,name',
                 'username' => 'required|unique:users,username',
-                'nik' => 'required|unique:users,nik',
+                'nik' => 'required|unique:users,nik|min:16|max:16 ',
                 
             ]);
     	$student = User::where('role','siswa')->orderBy('id','DESC')->first();
@@ -63,7 +63,7 @@ class PendaftaranController extends Controller
     	$user->save();
 
         $notification = array(
-                'message' => 'Agama Berhasil diperbaharui',
+                'message' => 'Daftar Berhasil dilakukan',
                 'alert-type' => 'success'
             );
 
@@ -71,4 +71,6 @@ class PendaftaranController extends Controller
 
 
     }
+
+
 }

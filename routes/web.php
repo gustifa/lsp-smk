@@ -174,6 +174,7 @@ require __DIR__.'/auth.php';
                 Route::get('/data/hapus/{id}',[LspController::class,'HapusDataLsp'])->name('hapus.data.lsp');
                 Route::get('/data/edit/{id}',[LspController::class,'EditDataLsp'])->name('edit.data.lsp');
                 Route::get('/data/update/{id}',[LspController::class,'UpdateDataLsp'])->name('update.data.lsp');
+                Route::post('/simpan',[LspController::class,'AdminDaftarSimpan'])->name('admin.simpan.pendaftaran.siswa');
             });
 
             Route::prefix('setting')->group(function(){

@@ -25,11 +25,17 @@
 				</div>
 				<!--end breadcrumb-->
 
+
 				<!-- Awal Moodal -->
 				<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 											<div class="btn-group" role="group">
-												<button type="button" class="btn btn-primary mb-3 mb-lg-0" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bxs-plus-square'></i> Siswa</button>
-												
+												<button type="button" class="btn btn-primary mb-3 mb-lg-0" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bxs-plus-square'></i> Asesi / Siswa</button>
+												<!-- <ul class="dropdown-menu" style="margin: 0px;">
+													<li><a class="dropdown-item" href="{{route('template.excel.user_rfid')}}">Download Template</a>
+													</li>
+													<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="{{route('lihat.import.userrfid')}}">Import Siswa</a>
+													</li>
+												</ul> -->
 											</div>
 										</div>
 
@@ -37,20 +43,55 @@
 											<div class="modal-dialog">
 												<div class="modal-content">
 													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel">Upload Template User</h5>
+														<h5 class="modal-title" id="exampleModalLabel">Form Tambah Siswa</h5>
 														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 													</div>
 													<div class="modal-body">
-				<form action="{{ route('simpan.agama') }}" method="POST">
+				<form action="{{ route('admin.simpan.pendaftaran.siswa') }}" method="POST">
             @csrf
 
 									<div class="mb-3">
-										<label class="form-label">Agama:</label>
-										<input type="text" name="nama" class="form-control" placeholder="Inputkan Agama">
-										@error('nama')
+										<label class="form-label">Username:</label>
+										<input type="text" name="username" class="form-control" placeholder="Inputkan username">
+										@error('username')
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
 									</div>
+									<div class="mb-3">
+										<label class="form-label">Password:</label>
+										<input type="text" name="password" class="form-control" placeholder="Inputkan Password">
+										@error('password')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Nama Lengkap:</label>
+										<input type="text" name="name" class="form-control" placeholder="Inputkan Nama Lengkap">
+										@error('name')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+									</div>
+									<div class="mb-3">
+										<label class="form-label">e-MAIL:</label>
+										<input type="text" name="email" class="form-control" placeholder="Inputkan Nama e-Mail">
+										@error('email')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+									</div>
+
+									<div class="mb-3">
+
+										<label class="form-label">NIK:</label>
+										
+
+										<input type="text" name="nik" class="form-control" placeholder="Inputkan NIK">
+										@error('nik')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+										
+									</div>
+									
+										
 									
 									<!-- <div class="mb-3">
 										<button type="submit" class="btn btn-primary px-5"><i class='bx bx-save mr-1'></i>Simpan</button>
@@ -66,13 +107,7 @@
 												</div>
 											</div>
 										</div>	<!-- AKhir Moodal -->
-
-
-
-
-				<hr/>
-
-
+														<hr />
 
 				<div class="card">
 					<div class="card-body">
@@ -89,7 +124,7 @@
 										<th>KK</th>
 										<th>Sertifikat</th>
 										<th>Rapor</th>
-										<
+										<th>Cetak</th>
 										<!-- <th>Alamat</th> -->
 										<th>Aksi</th>
 									</tr>
@@ -106,7 +141,7 @@
 										<td><a class="btn btn-warning" href=""><i class='bx bx-show mr-1'></i></a></td>
 										<td><a class="btn btn-success" href=""><i class='bx bx-show mr-1'></i></a></td>
 										<td><a class="btn btn-warning" href=""><i class='bx bx-show mr-1'></i></a></td>
-										
+										<td><a class="btn btn-warning" href="{{route('cetak.pendaftaran.admin', $item->id)}}"><i class=''>aaaaa</i></a></td>
 										<!-- <td>{{$item->address}}</td> -->
 										<td style="width: 20px;">
 											<a class="btn btn-info" href=""><i class='bx bx-edit mr-1'></i></a>

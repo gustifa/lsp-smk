@@ -46,8 +46,23 @@
 					<a href="{{route('data.lsp')}}">
 						<div class="parent-icon"><i class='bx bx-user-pin'></i>
 						</div>
-						<div class="menu-title">Data LSP-P1</div>
+						<div class="menu-title">Data Asesi</div>
 					</a>
+				</li>
+
+				
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-export"></i>
+						</div>
+						<div class="menu-title">Export Data</div>
+					</a>
+
+					<ul>
+						<li> <a href="{{route('lihat.jurusan')}}"><i class="bx bx-right-arrow-alt"></i>Asesi</a>
+						</li>
+
+					</ul>
 				</li>
 
 				<li>
@@ -57,7 +72,6 @@
 						<div class="menu-title">Setting </div>
 					</a>
 				</li>
-
 
 
 			</ul>

@@ -35,5 +35,62 @@ class LspController extends Controller
 	    	$dataLsp = User::find($id);
 	    	return view('admin.lsp.edit_data_lsp', compact('dataLsp'));
 
-	    }
+	  	}
+
+	public function AdminDaftarSimpan(Request $request){
+        $validatedData = $request->validate([
+                // 'name' => 'required|unique:users,name',
+                'username' => 'required|unique:users,username',
+                'nik' => 'required|unique:users,nik|min:16|max:16 ',
+                
+            ]);
+        $student = User::where('role','siswa')->orderBy('id','DESC')->first();
+
+        if ($student == null) {
+            $firstReg = 0;
+            $studentId = $firstReg+1;
+            if ($studentId < 10) {
+                $id_no = '000'.$studentId;
+            }elseif ($studentId < 100) {
+                $id_no = '00'.$studentId;
+            }elseif ($studentId < 1000) {
+                $id_no = '0'.$studentId;
+            }
+        }else{
+     $student = User::where('role','siswa')->orderBy('id','DESC')->first()->id;
+        $studentId = $student+1;
+        if ($studentId < 10) {
+                $id_no = '000'.$studentId;
+            }elseif ($studentId < 100) {
+                $id_no = '00'.$studentId;
+            }elseif ($studentId < 1000) {
+                $id_no = '0'.$studentId;
+            }
+
+        }
+        $date = date("Y"); 
+        $final_id_no = $date.($id_no);
+        $user = new User();
+        $user->no_pendaftaran = $final_id_no;
+        $user->name = strtoupper($request->name);
+        $user->nik = $request->nik;
+        $user->email = $request->email;
+        $user->username = $request->username;
+        $user->password = bcrypt($request->password);
+        $user->role = 'siswa';
+        $user->status = 'active';
+
+        $user->save();
+
+        $notification = array(
+                'message' => 'Daftar Berhasil ditambahkan',
+                'alert-type' => 'success'
+            );
+
+        return redirect()->back()->with($notification);
+
+
+    }
+
+
 }
