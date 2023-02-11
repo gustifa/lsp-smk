@@ -30,12 +30,6 @@
 				<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 											<div class="btn-group" role="group">
 												<button type="button" class="btn btn-primary mb-3 mb-lg-0" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bxs-plus-square'></i> Asesi / Siswa</button>
-												<!-- <ul class="dropdown-menu" style="margin: 0px;">
-													<li><a class="dropdown-item" href="{{route('template.excel.user_rfid')}}">Download Template</a>
-													</li>
-													<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="{{route('lihat.import.userrfid')}}">Import Siswa</a>
-													</li>
-												</ul> -->
 											</div>
 										</div>
 
@@ -59,7 +53,7 @@
 									</div>
 									<div class="mb-3">
 										<label class="form-label">Password:</label>
-										<input type="text" name="password" class="form-control" placeholder="Inputkan Password">
+										<input type="password" name="password" class="form-control" placeholder="Inputkan Password">
 										@error('password')
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
@@ -73,18 +67,41 @@
 									</div>
 									<div class="mb-3">
 										<label class="form-label">e-MAIL:</label>
-										<input type="text" name="email" class="form-control" placeholder="Inputkan Nama e-Mail">
+										<input type="email" name="email" class="form-control" placeholder="Inputkan Nama e-Mail">
 										@error('email')
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
 									</div>
+									<div class="mb-3">
 
+										<label class="form-label">Tempat Lahir:</label>
+										
+
+										<input type="text" name="tempat_lahir" class="form-control" placeholder="Inputkan Tempat Lahir">
+										@error('tempat_lahir')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+										
+									</div>
+
+									<div class="mb-3">
+
+										<label class="form-label">Tanggal Lahir:</label>
+										
+
+										<input type="date" name="tanggal_lahir" class="form-control" placeholder="Inputkan Tanggal Lahir">
+										@error('tanggal_lahir')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+										
+									</div>
+					
 									<div class="mb-3">
 
 										<label class="form-label">NIK:</label>
 										
 
-										<input type="text" name="nik" class="form-control" placeholder="Inputkan NIK">
+										<input type="number" name="nik" class="form-control" placeholder="Inputkan NIK">
 										@error('nik')
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
@@ -107,6 +124,100 @@
 												</div>
 											</div>
 										</div>	<!-- AKhir Moodal -->
+
+											<!-- Awal Moodal Edit Data -->
+										<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Form Edit Siswa</h5>
+														<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+													</div>
+													<div class="modal-body">
+				<form action="{{ route('admin.simpan.pendaftaran.siswa') }}" method="POST">
+            @csrf
+
+									<div class="mb-3">
+										<label class="form-label">Username:</label>
+										<input type="text" name="username" class="form-control">
+										@error('username')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Password:</label>
+										<input type="password" name="password" class="form-control" placeholder="Inputkan Password">
+										@error('password')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Nama Lengkap:</label>
+										<input type="text" name="name" class="form-control" placeholder="Inputkan Nama Lengkap">
+										@error('name')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+									</div>
+									<div class="mb-3">
+										<label class="form-label">e-MAIL:</label>
+										<input type="email" name="email" class="form-control" placeholder="Inputkan Nama e-Mail">
+										@error('email')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+									</div>
+									<div class="mb-3">
+
+										<label class="form-label">Tempat Lahir:</label>
+										
+
+										<input type="text" name="tempat_lahir" class="form-control" placeholder="Inputkan Tempat Lahir">
+										@error('tempat_lahir')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+										
+									</div>
+
+									<div class="mb-3">
+
+										<label class="form-label">Tanggal Lahir:</label>
+										
+
+										<input type="date" name="tanggal_lahir" class="form-control" placeholder="Inputkan Tanggal Lahir">
+										@error('tanggal_lahir')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+										
+									</div>
+					
+									<div class="mb-3">
+
+										<label class="form-label">NIK:</label>
+										
+
+										<input type="number" name="nik" class="form-control" placeholder="Inputkan NIK">
+										@error('nik')
+	 <span class="text-danger">{{ $message }}</span>
+	 @enderror
+										
+									</div>
+									
+										
+									
+									<!-- <div class="mb-3">
+										<button type="submit" class="btn btn-primary px-5"><i class='bx bx-save mr-1'></i>Simpan</button>
+									</div> -->
+								
+
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+														<button type="submit" class="btn btn-primary">Simpan</button>
+													</div>
+													</form>
+												</div>
+											</div>
+										</div>	<!-- AKhir Moodal -->
+
 														<hr />
 
 				<div class="card">
@@ -117,14 +228,11 @@
 									<tr>
 										<th style="width: 8px;">No</th>
 										<th>Nama</th>
+										<th>No Pendaftaran</th>
 										<th>NIK</th>
 										<th>Tempat Lahir</th>
 										<th>Tanggal Lahir</th>
-										<th>KTP</th>
-										<th>KK</th>
-										<th>Sertifikat</th>
-										<th>Rapor</th>
-										<th>Cetak</th>
+										<th>Detail</th>
 										<!-- <th>Alamat</th> -->
 										<th>Aksi</th>
 									</tr>
@@ -134,17 +242,14 @@
 									<tr>
 										<td>{{$key+1}}</td>
 										<td>{{$item->name}}</td>
+										<td>{{$item->no_pendaftaran}}</td>
 										<td>{{$item->nik}}</td>
 										<td>{{$item->tempat_lahir}}</td>
 										<td>{{$item->tanggal_lahir}}</td>
-										<td><a class="btn btn-success" href=""><i class='bx bx-show mr-1'></i></a></td>
-										<td><a class="btn btn-warning" href=""><i class='bx bx-show mr-1'></i></a></td>
-										<td><a class="btn btn-success" href=""><i class='bx bx-show mr-1'></i></a></td>
-										<td><a class="btn btn-warning" href=""><i class='bx bx-show mr-1'></i></a></td>
-										<td><a class="btn btn-warning" href="{{route('cetak.pendaftaran.admin', $item->id)}}"><i class=''>aaaaa</i></a></td>
+										<td><a class="btn btn-primary" href=""><i class='bx bx-show mr-1'></i></a></td>
 										<!-- <td>{{$item->address}}</td> -->
 										<td style="width: 20px;">
-											<a class="btn btn-info" href=""><i class='bx bx-edit mr-1'></i></a>
+											<a class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bx-edit mr-1'></i></a>
 											<a class="btn btn-danger" href="{{route('hapus.data.lsp',$item->id)}}" id="delete"><i class='bx bx-x-circle mr-1'></i></a>
 
 										</td>

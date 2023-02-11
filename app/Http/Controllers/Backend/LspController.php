@@ -12,7 +12,8 @@ class LspController extends Controller
          // $adminData = User::all();
     	 // $id = Auth::user()->id;
       //    $dataSiswa = User::find($id);
-         $dataLsp = User::where('role','siswa')->get();;
+         $dataLsp = User::where('role','siswa')->get();
+         //$editdataLsp = User::where('role','siswa')->select();
          // $dataLsp = User::all();
          
         return view('admin.lsp.lihat_data_lsp',compact('dataLsp'));
@@ -76,6 +77,8 @@ class LspController extends Controller
         $user->nik = $request->nik;
         $user->email = $request->email;
         $user->username = $request->username;
+        $user->tempat_lahir = $request->tempat_lahir;
+        $user->tanggal_lahir = $request->tanggal_lahir;
         $user->password = bcrypt($request->password);
         $user->role = 'siswa';
         $user->status = 'active';
